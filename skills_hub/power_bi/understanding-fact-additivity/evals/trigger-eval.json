@@ -1,0 +1,102 @@
+[
+  {
+    "query": "my inventory dashboard shows On_Hand_Qty totaling 4.2 million across the whole year but we only ever stock about 30k units at a time. why is the total so inflated?",
+    "should_trigger": true,
+    "why": "Balance summed across dates produces inflated total - classic semi-additive detection."
+  },
+  {
+    "query": "I have a Margin_Pct column in my Sales fact table and when I drop it on a card it shows 8000%. how should I aggregate this correctly?",
+    "should_trigger": true,
+    "why": "Percentage being summed/averaged - non-additive fact needing DIVIDE of sums."
+  },
+  {
+    "query": "should I use SUM or AVERAGE for account balance in my banking model? summing across months gives nonsense numbers",
+    "should_trigger": true,
+    "why": "Account balance summed across time - semi-additive aggregation choice."
+  },
+  {
+    "query": "writing a measure for average unit price across products and it looks wrong when I average the avg prices. whats the right way",
+    "should_trigger": true,
+    "why": "Average of ratios vs ratio of sums - core non-additive rule."
+  },
+  {
+    "query": "headcount keeps adding up over the 12 months in my matrix visual. our company is 500 people not 6000",
+    "should_trigger": true,
+    "why": "Headcount is a level captured per period - semi-additive being wrongly summed over time."
+  },
+  {
+    "query": "which fields in my model are safe to just sum everywhere and which ones break when you total them across a date axis?",
+    "should_trigger": true,
+    "why": "Directly asks to classify facts by additivity behavior across dimensions."
+  },
+  {
+    "query": "I'm building a measure for inventory and want the closing balance at the end of each period instead of the sum. whats the dax pattern",
+    "should_trigger": true,
+    "why": "Last/closing balance for semi-additive fact - LASTNONBLANK pattern this skill prescribes."
+  },
+  {
+    "query": "our defect rate by line is being averaged across plants and the company-wide number doesnt match. think the rate math is off",
+    "should_trigger": true,
+    "why": "Rate aggregated incorrectly - non-additive fact needs numerator/denominator stored and DIVIDEd."
+  },
+  {
+    "query": "temperature readings from sensors - can I total these in a column chart by hour or is that meaningless?",
+    "should_trigger": true,
+    "why": "Uncommon but valid: intensity/measure value is non-additive, cannot be summed."
+  },
+  {
+    "query": "i have an inventory fact and want to chart stock levels over time - what visual should I pick and how do i make the totals not lie?",
+    "should_trigger": true,
+    "why": "Competes with visualizing-dimensional-models but the core need is correct semi-additive aggregation so totals are right; this skill wins."
+  },
+  {
+    "query": "I want to show inventory on hand trended monthly as a line chart vs a clustered column - which visual reads better for stock levels?",
+    "should_trigger": false,
+    "why": "Pure visual-type selection for a metric -> mapping-questions-to-charts."
+  },
+  {
+    "query": "need a YTD and prior-year-over-year measure for revenue with a 3-month moving average",
+    "should_trigger": false,
+    "why": "Time-intelligence calculations (YTD/PoP/moving avg) -> applying-time-intelligence."
+  },
+  {
+    "query": "how do I write CALCULATE with multiple filters to get net sales after returns, and a profit ratio measure?",
+    "should_trigger": false,
+    "why": "General DAX measure authoring with CALCULATE/context -> authoring-dax-measures."
+  },
+  {
+    "query": "my date table relationship to the inventory fact isnt filtering right, cross-filter direction seems wrong",
+    "should_trigger": false,
+    "why": "Relationship/cross-filter modeling issue -> modeling-semantic-data."
+  },
+  {
+    "query": "the model is 4GB and the report is slow when I drop the sales amount measure on a big matrix. how do I shrink it?",
+    "should_trigger": false,
+    "why": "Performance/model size optimization -> optimizing-model-performance."
+  },
+  {
+    "query": "which Power BI visual best answers 'what drives high churn' - key influencers or decomposition tree?",
+    "should_trigger": false,
+    "why": "AI visual selection -> ai-powered-analysis-selection."
+  },
+  {
+    "query": "I want bank branch managers to only see their own branch's account balances in the report",
+    "should_trigger": false,
+    "why": "Row-level security on balances data -> securing-row-level-access."
+  },
+  {
+    "query": "set up drillthrough from the inventory summary page to a product-level detail page",
+    "should_trigger": false,
+    "why": "Drill pattern design -> drill-pattern-design."
+  },
+  {
+    "query": "in Power Query I need to unpivot the monthly stock-level columns into a tidy fact table before loading",
+    "should_trigger": false,
+    "why": "Data shaping/unpivot in Power Query -> transforming-data-power-query."
+  },
+  {
+    "query": "build an exec dashboard for our retail POS data with sales, margin %, and inventory KPIs laid out for leadership",
+    "should_trigger": false,
+    "why": "Multi-visual dashboard layout for an audience -> dashboard-composition."
+  }
+]

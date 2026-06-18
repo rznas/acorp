@@ -1,0 +1,107 @@
+[
+  {
+    "query": "We're an ISV building a SaaS portal and want to embed our sales dashboard so our external customers can see their own data without needing Power BI accounts. App-owns-data right?",
+    "should_trigger": true,
+    "why": "Classic embed-for-your-customers / app-owns-data scenario \u2014 core target intent."
+  },
+  {
+    "query": "how do i generate an embed token using a service principal and the powerbi rest api? do i need a master user instead",
+    "should_trigger": true,
+    "why": "Embed token + service principal vs master user via REST API \u2014 squarely the target skill."
+  },
+  {
+    "query": "I need a PowerShell script to loop through all our workspaces, import a bunch of .pbix files, set the datasource credentials, and kick off a refresh on each dataset.",
+    "should_trigger": true,
+    "why": "Bulk automation of workspaces/import/credentials/refresh via PowerShell \u2014 target automation surface."
+  },
+  {
+    "query": "want to put a power bi report inside our internal react app so employees sign in with their own org account and see it in an iframe",
+    "should_trigger": true,
+    "why": "Embed-for-your-organization / user-owns-data with JS client API \u2014 target intent."
+  },
+  {
+    "query": "How do I package my D3-based gauge into a .pbiviz so I can import it as a custom visual into my report?",
+    "should_trigger": true,
+    "why": "Building/importing a .pbiviz custom visual \u2014 explicitly in scope."
+  },
+  {
+    "query": "I'm a multitenant SaaS vendor with ~400 customer tenants. How do I isolate each customer's data when embedding instead of spinning up 400 service principals?",
+    "should_trigger": true,
+    "why": "Service principal profiles for multitenancy \u2014 uncommon but valid target case."
+  },
+  {
+    "query": "Can I connect Tabular Editor and DAX Studio to my Power BI Desktop model to bulk-edit measures and check query plans?",
+    "should_trigger": true,
+    "why": "Connecting external tools (Tabular Editor, DAX Studio) \u2014 explicitly in scope."
+  },
+  {
+    "query": "Which capacity SKU do I need for embedding analytics into our customer-facing app, and how do A SKUs differ from F/P for embed scenarios?",
+    "should_trigger": true,
+    "why": "Capacity SKUs for embedding \u2014 part of the token/capacity model the skill covers."
+  },
+  {
+    "query": "i want to automate creating a new workspace, assigning it to a capacity, and adding members programmatically every time we onboard a client",
+    "should_trigger": true,
+    "why": "REST API automation of workspace creation/capacity assignment \u2014 target intent without naming the API explicitly."
+  },
+  {
+    "query": "Trying to call the Power BI REST API from a node backend to trigger a dataset refresh on a schedule from our own service. What auth flow?",
+    "should_trigger": true,
+    "why": "REST API programmatic refresh + auth from a custom app \u2014 core automation scope."
+  },
+  {
+    "query": "How do I embed a Power BI report URL into a Microsoft Teams channel and pin it as a tab for my finance team?",
+    "should_trigger": false,
+    "why": "Sharing/distribution inside Teams, not custom-app embedding \u2014 needs publishing-and-sharing-content."
+  },
+  {
+    "query": "Set up RLS so each regional manager only sees their own region's sales rows when they open the report.",
+    "should_trigger": false,
+    "why": "Row-level security design \u2014 needs securing-row-level-access (even if later embedded)."
+  },
+  {
+    "query": "I want a dev-test-prod deployment pipeline so my Sales dataset and report promote cleanly between stages with parameter rules.",
+    "should_trigger": false,
+    "why": "Deployment pipelines / ALM \u2014 needs managing-deployment-lifecycle."
+  },
+  {
+    "query": "Need to build a custom D3 column chart... wait, actually I just need to pick the right built-in visual for showing monthly revenue vs target. Which chart?",
+    "should_trigger": false,
+    "why": "Choosing the correct chart type for a business question \u2014 needs mapping-questions-to-charts."
+  },
+  {
+    "query": "My embedded-feeling report is super slow to load \u2014 large model, takes 40s. How do I shrink it and find the bottleneck visuals?",
+    "should_trigger": false,
+    "why": "Model/report performance tuning \u2014 needs optimizing-model-performance, not embedding."
+  },
+  {
+    "query": "How do I write the M code in Power Query to combine 12 monthly CSV exports and fold the filter back to the source?",
+    "should_trigger": false,
+    "why": "Power Query / M transformation and query folding \u2014 needs transforming-data-power-query."
+  },
+  {
+    "query": "Configure the on-premises data gateway so my DirectQuery model against SQL Server refreshes in the service.",
+    "should_trigger": false,
+    "why": "Gateways / connectivity / storage mode \u2014 needs connecting-data-sources."
+  },
+  {
+    "query": "We need pixel-perfect printable invoices in Report Builder with exact page breaks and a company letterhead. RDL.",
+    "should_trigger": false,
+    "why": "Paginated RDL report authoring \u2014 needs building-paginated-reports."
+  },
+  {
+    "query": "As tenant admin I want to turn on the 'embed content in apps' tenant setting and audit who's exporting reports. Where in the admin portal?",
+    "should_trigger": false,
+    "why": "Tenant settings / auditing / governance \u2014 needs administering-and-governing despite the embed keyword."
+  },
+  {
+    "query": "Write a DAX measure for rolling 3-month average revenue that ignores the slicer on month.",
+    "should_trigger": false,
+    "why": "DAX measure authoring / time intelligence \u2014 needs authoring-dax-measures (or applying-time-intelligence)."
+  },
+  {
+    "query": "I published an app from my workspace \u2014 how do I manage who in the org can install it and set up email subscriptions?",
+    "should_trigger": false,
+    "why": "Power BI Apps distribution and subscriptions \u2014 needs publishing-and-sharing-content."
+  }
+]

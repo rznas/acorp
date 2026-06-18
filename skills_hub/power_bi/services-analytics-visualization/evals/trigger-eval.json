@@ -1,0 +1,102 @@
+[
+  {
+    "query": "I'm building a call center dashboard for our telecom support team \u2014 what's the best Power BI visual to show average handle time and abandonment rate by agent?",
+    "should_trigger": true,
+    "why": "Call-center/telecom KPIs (AHT, abandonment) mapped to Power BI visuals \u2014 core services-analytics-visualization intent."
+  },
+  {
+    "query": "need to viz monthly subscriber churn for our mobile plans in power bi, whats a good chart for churn rate trend",
+    "should_trigger": true,
+    "why": "Telecom churn rate visual choice \u2014 explicit trigger keyword for this domain skill."
+  },
+  {
+    "query": "Our hospital has a Census fact table with daily bed counts. How should I display bed occupancy rate by ward in Power BI without double-counting across days?",
+    "should_trigger": true,
+    "why": "Healthcare semi-additive bed census/occupancy \u2192 card/gauge with average-not-sum; squarely this skill."
+  },
+  {
+    "query": "What Power BI chart should I use to track on-time performance and load factor for our airline routes from the Flights table?",
+    "should_trigger": true,
+    "why": "Airline/transportation on-time % and load factor visuals \u2014 explicit triggers for services-analytics-visualization."
+  },
+  {
+    "query": "I run a consulting firm and have a Timesheet table with billable vs non-billable hours per consultant. How do I show billable utilization in a report?",
+    "should_trigger": true,
+    "why": "Professional-services billable utilization visualization \u2014 core domain pattern."
+  },
+  {
+    "query": "we track student course registrations (factless fact, no measure column) for the fall semester \u2014 how do i count enrollment by program in power bi",
+    "should_trigger": true,
+    "why": "Education factless fact (course registration) \u2192 =1 count measure and visual; uncommon-but-valid case for this skill."
+  },
+  {
+    "query": "Building a report on patient admissions moving through ER -> Admitted -> Discharged stages. Best visual to show how patients progress through the pipeline?",
+    "should_trigger": true,
+    "why": "Healthcare accumulating-snapshot admissions pipeline \u2192 funnel chart; services-specific without naming the feature."
+  },
+  {
+    "query": "I have call detail records (CDR) and want to rank our busiest support queues and show daily call volume trend \u2014 which visuals?",
+    "should_trigger": true,
+    "why": "Telecom CDR transaction grain \u2192 bar for ranking, line for trend; explicit services data source."
+  },
+  {
+    "query": "Should I use a line chart or a column chart to compare enrolled headcount per semester for our university, given it's a snapshot that I shouldn't be summing?",
+    "should_trigger": true,
+    "why": "Education periodic-snapshot headcount; competes with mapping-questions-to-charts but services domain + semi-additive nuance makes this skill win."
+  },
+  {
+    "query": "for our courier delivery service i want a dashboard showing on-time delivery % and driver utilization by region in power bi",
+    "should_trigger": true,
+    "why": "Transportation on-time % and utilization KPIs \u2192 services-analytics-visualization."
+  },
+  {
+    "query": "How do I write the DAX measure for occupancy rate using DIVIDE of occupied beds over total beds, with correct filter context?",
+    "should_trigger": false,
+    "why": "Pure DAX authoring of a measure; needs authoring-dax-measures even though occupancy is a services term."
+  },
+  {
+    "query": "My telecom CDR dataset is 400M rows and the call-volume report is painfully slow. How do I shrink the model and speed it up?",
+    "should_trigger": false,
+    "why": "Performance tuning of a large model; needs optimizing-model-performance, not visual selection."
+  },
+  {
+    "query": "I need YTD and prior-year-over-year comparisons for hospital admissions counts \u2014 how do I build the time intelligence DAX?",
+    "should_trigger": false,
+    "why": "YTD / period-over-period time intelligence; needs applying-time-intelligence despite healthcare context."
+  },
+  {
+    "query": "For our retail stores I want to visualize POS sales by product category and promo lift \u2014 best Power BI chart?",
+    "should_trigger": false,
+    "why": "Retail POS/promo visualization; needs retail-analytics-visualization, a sibling domain skill."
+  },
+  {
+    "query": "I want to recommend the right visual based on whether the fact is additive, semi-additive, or non-additive \u2014 give me the general rules.",
+    "should_trigger": false,
+    "why": "Generic additivity-to-visual rules; needs understanding-fact-additivity (Layer 1), not a domain skill."
+  },
+  {
+    "query": "Set up dynamic RLS so each hospital ward manager only sees their own ward's patient census data.",
+    "should_trigger": false,
+    "why": "Row-level security setup; needs securing-row-level-access despite healthcare census wording."
+  },
+  {
+    "query": "How do I connect Power BI to our airline operations SQL Server and decide between Import and DirectQuery for the flights data?",
+    "should_trigger": false,
+    "why": "Connector and storage-mode decision; needs connecting-data-sources, not visual recommendation."
+  },
+  {
+    "query": "I want to use Key Influencers to find what drives telecom customer churn in my dataset.",
+    "should_trigger": false,
+    "why": "AI visual (Key Influencers) for churn drivers; needs ai-powered-analysis-selection even though churn is a services term."
+  },
+  {
+    "query": "In our call center report, let users click an agent and drill through to a page showing all that agent's individual calls.",
+    "should_trigger": false,
+    "why": "Drill-through interaction pattern; needs drill-pattern-design (or building-interactive-reports), not chart-type selection."
+  },
+  {
+    "query": "Build a pixel-perfect printable monthly statement of patient billing that we can mail to insurers.",
+    "should_trigger": false,
+    "why": "Pixel-perfect printable RDL output; needs building-paginated-reports despite healthcare billing context."
+  }
+]

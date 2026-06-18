@@ -1,0 +1,102 @@
+[
+  {
+    "query": "need a YTD sales measure on my Sales fact table that resets each fiscal year, our year starts July 1",
+    "should_trigger": true,
+    "why": "Year-to-date running total with fiscal-year start is core time-intelligence DAX."
+  },
+  {
+    "query": "how do i compare this month's revenue to the same month last year in a card visual",
+    "should_trigger": true,
+    "why": "Same-period-last-year comparison is a flagship time-intelligence pattern."
+  },
+  {
+    "query": "I want a column that shows the % change in Orders vs the prior quarter for my exec dashboard",
+    "should_trigger": true,
+    "why": "Period-over-period (vs prior quarter) growth calc is time intelligence."
+  },
+  {
+    "query": "build a trailing 3-month rolling average of Net Revenue so the trend line is less spiky",
+    "should_trigger": true,
+    "why": "Moving/rolling average over a date window is explicitly in scope."
+  },
+  {
+    "query": "my inventory fact is semi-additive \u2014 how do I get the month-end on-hand quantity instead of summing across days?",
+    "should_trigger": true,
+    "why": "Semi-additive period-end balance (CLOSINGBALANCE family) is a target recipe."
+  },
+  {
+    "query": "QTD vs prior QTD for our finance scorecard, measures keep returning the full-year total instead of resetting",
+    "should_trigger": true,
+    "why": "QTD running total plus prior-period comparison is core time intelligence."
+  },
+  {
+    "query": "should I turn off Auto date/time and mark my Calendar table as a date table before writing running totals?",
+    "should_trigger": true,
+    "why": "Choosing Auto date/time vs marked date table for time intelligence is in the When-to-Use list."
+  },
+  {
+    "query": "year-end headcount measure that takes the last value in December and ignores the other months when I roll up to year",
+    "should_trigger": true,
+    "why": "Year-end semi-additive balance using last-date-in-period logic is in scope."
+  },
+  {
+    "query": "i need cash balance as of quarter end, summing the daily balances is giving me garbage numbers",
+    "should_trigger": true,
+    "why": "Quarter-end period-end balance is the semi-additive recipe even though user doesn't name DAX."
+  },
+  {
+    "query": "trailing twelve months revenue measure for the SaaS MRR report, rolling not calendar-year",
+    "should_trigger": true,
+    "why": "Trailing/rolling window (TTM) is a moving-window time-intelligence pattern."
+  },
+  {
+    "query": "write a DAX measure for gross margin % = (Sales - COGS) / Sales using DIVIDE",
+    "should_trigger": false,
+    "why": "Plain ratio measure with no time component \u2014 needs authoring-dax-measures."
+  },
+  {
+    "query": "how do I decide whether to show monthly revenue as a line chart or a clustered column chart over time",
+    "should_trigger": false,
+    "why": "Visual selection for a time series, not the DAX calc \u2014 needs mapping-questions-to-charts."
+  },
+  {
+    "query": "my inventory on-hand is semi-additive so what visual should I avoid \u2014 does a stacked bar misrepresent it?",
+    "should_trigger": false,
+    "why": "About which visual fits a semi-additive fact, not writing the balance DAX \u2014 needs understanding-fact-additivity."
+  },
+  {
+    "query": "I need to create a proper Date table with a contiguous calendar and mark it, plus relationships to my fact tables",
+    "should_trigger": false,
+    "why": "Building/marking the date table and relationships is modeling, not the time calcs \u2014 needs modeling-semantic-data."
+  },
+  {
+    "query": "users want to drill from the yearly revenue column down to quarter then month then day in one visual",
+    "should_trigger": false,
+    "why": "Date hierarchy drill-down interaction, not time-intelligence DAX \u2014 needs drill-pattern-design."
+  },
+  {
+    "query": "add a slicer so people can pick a date range and a relative-date filter for last 30 days on the report",
+    "should_trigger": false,
+    "why": "Relative-date slicer/filter UI, not a measure \u2014 needs building-interactive-reports."
+  },
+  {
+    "query": "my year-over-year report is super slow on a 400M-row fact, how do I speed up the refresh and visuals",
+    "should_trigger": false,
+    "why": "Performance tuning of a large model/report \u2014 needs optimizing-model-performance."
+  },
+  {
+    "query": "create a date dimension in Power Query with M, adding year, quarter, month, fiscal period columns",
+    "should_trigger": false,
+    "why": "Generating the calendar table columns in Power Query/M \u2014 needs transforming-data-power-query."
+  },
+  {
+    "query": "lay out a monthly trend dashboard for retail merchandisers showing sales, traffic, and conversion over time",
+    "should_trigger": false,
+    "why": "Multi-visual dashboard layout/composition, not the time DAX itself \u2014 needs dashboard-composition."
+  },
+  {
+    "query": "for our quarterly board deck I need a pixel-perfect printable P&L with running fiscal-year columns in Report Builder",
+    "should_trigger": false,
+    "why": "Paginated RDL report authoring, not the DAX pattern \u2014 needs building-paginated-reports."
+  }
+]

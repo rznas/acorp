@@ -1,0 +1,102 @@
+[
+  {
+    "query": "In Power Query my Sales.csv has region names crammed into one column like 'West-CA-Store12' - how do I split that into Region, State, StoreID columns?",
+    "should_trigger": true,
+    "why": "Split column transform in Power Query Editor - core target intent."
+  },
+  {
+    "query": "I've got 12 monthly excel files in a SharePoint folder all with the same columns, want them combined into one table before loading. whats the cleanest way?",
+    "should_trigger": true,
+    "why": "Combine Files from a folder is a named Power Query transform in scope."
+  },
+  {
+    "query": "my refresh on the FactOrders query went from 2 min to 25 min after I added a custom column with Text.Contains, think I broke query folding - how do I check the native query?",
+    "should_trigger": true,
+    "why": "Query folding diagnosis for slow refresh caused by a transform - explicitly in scope."
+  },
+  {
+    "query": "I have a wide spreadsheet with columns Jan, Feb, Mar... Dec for each product. need it as Month/Value rows instead for the model",
+    "should_trigger": true,
+    "why": "Unpivot transform described by intent without naming it - target skill."
+  },
+  {
+    "query": "should I duplicate or reference my staging query when I want both a fact table and a dim table out of the same source?",
+    "should_trigger": true,
+    "why": "Referenced vs duplicated queries decision - explicitly covered."
+  },
+  {
+    "query": "I pulled in one giant flat Transactions table from the ERP. how do I break it into a proper fact table plus customer and product dimension tables before modeling?",
+    "should_trigger": true,
+    "why": "Shaping a wide source into star-schema fact/dimension tables in Power Query - core scope."
+  },
+  {
+    "query": "trying to join my Orders query to the Customers query on CustomerKey to bring in the customer name, do I merge or append?",
+    "should_trigger": true,
+    "why": "Merge vs append (join) queries - named transform in scope."
+  },
+  {
+    "query": "the date column came in as text like '2026/03/14' and there are blank rows and a header row mixed in - need to clean it up in the editor before it loads",
+    "should_trigger": true,
+    "why": "Change type, remove rows, filtering - cleaning transforms in Power Query Editor."
+  },
+  {
+    "query": "I want to group my line-item table up to one row per OrderID with a summed quantity, can the applied steps do that aggregation pre-load?",
+    "should_trigger": true,
+    "why": "Group By transform via applied steps before load - target intent."
+  },
+  {
+    "query": "should I move these transforms into a dataflow so other reports can reuse the cleaned customer table instead of redoing the M each time?",
+    "should_trigger": true,
+    "why": "Dataflows for reusable transforms - uncommon but explicitly in scope."
+  },
+  {
+    "query": "my report is huge and slow - 800MB pbix. how do i shrink the model and find the worst visuals with Performance Analyzer?",
+    "should_trigger": false,
+    "why": "Model size reduction and Performance Analyzer belong to optimizing-model-performance."
+  },
+  {
+    "query": "after loading both tables I need to set up the relationship between FactSales and DimDate - what cardinality and cross-filter direction should I pick?",
+    "should_trigger": false,
+    "why": "Relationships/cardinality/cross-filter are modeling-semantic-data, not Power Query."
+  },
+  {
+    "query": "should I connect to the Azure SQL warehouse in Import or DirectQuery mode, and do I need a gateway for scheduled refresh?",
+    "should_trigger": false,
+    "why": "Connector and Import-vs-DirectQuery storage mode choice is connecting-data-sources."
+  },
+  {
+    "query": "I need a measure that sums sales but only for the selected region using CALCULATE - can you help write the DAX?",
+    "should_trigger": false,
+    "why": "Writing CALCULATE measures is authoring-dax-measures."
+  },
+  {
+    "query": "we have one wide spreadsheet with sales by month as columns - what chart should I use to show the monthly trend to execs?",
+    "should_trigger": false,
+    "why": "Despite 'wide spreadsheet/columns' overlap, the need is chart choice - mapping-questions-to-charts."
+  },
+  {
+    "query": "I want a calculated column that flags rows as 'high value' when amount > 1000, in the model not in the query - which is better?",
+    "should_trigger": false,
+    "why": "Calculated column in the model is authoring-dax-measures (DAX calc column)."
+  },
+  {
+    "query": "need YTD and prior-year-over-year sales with a moving 3-month average - how do I build the time intelligence?",
+    "should_trigger": false,
+    "why": "YTD/PoP/moving avg time intelligence is applying-time-intelligence."
+  },
+  {
+    "query": "I have a star schema with a fact and four dimensions - which visuals best show the additive sales fact vs the semi-additive inventory fact?",
+    "should_trigger": false,
+    "why": "Visual choice driven by additivity is understanding-fact-additivity / visualizing-dimensional-models."
+  },
+  {
+    "query": "set up RLS so each regional manager only sees their own region's rows in the sales table - dynamic with USERPRINCIPALNAME",
+    "should_trigger": false,
+    "why": "Row-level security filtering by region is securing-row-level-access, not Power Query row filtering."
+  },
+  {
+    "query": "I want to add a date dimension table with year/quarter/month and mark it as the date table for time intel",
+    "should_trigger": false,
+    "why": "Creating/marking a date table for the model is modeling-semantic-data."
+  }
+]

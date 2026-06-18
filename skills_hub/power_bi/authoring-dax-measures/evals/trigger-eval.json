@@ -1,0 +1,102 @@
+[
+  {
+    "query": "my Total Sales measure is double-counting at the region subtotal level, sum is way too high. how do I write this in DAX so the grand total is right?",
+    "should_trigger": true,
+    "why": "inflated total in a DAX measure \u2014 core Step 6 validation + correct aggregation"
+  },
+  {
+    "query": "need a measure that gives gross margin % = (Sales - Cost) / Sales but it errors out when Sales is 0",
+    "should_trigger": true,
+    "why": "safe ratio with DIVIDE, a named example of this skill"
+  },
+  {
+    "query": "should StoreProfit be a calculated column on the Sales table or a measure? it's Revenue minus Cost per row",
+    "should_trigger": true,
+    "why": "deciding measure vs calculated column \u2014 Step 1 of the workflow"
+  },
+  {
+    "query": "write me a % of total sales measure that respects the slicer on category using CALCULATE and ALLSELECTED",
+    "should_trigger": true,
+    "why": "%-of-total via CALCULATE filter modifiers, directly in scope"
+  },
+  {
+    "query": "how do i do a running total of revenue in dax without it resetting per visual",
+    "should_trigger": true,
+    "why": "running total is an explicitly listed measure pattern (casual phrasing)"
+  },
+  {
+    "query": "trying to rank products by units sold with RANKX but every product shows rank 1",
+    "should_trigger": true,
+    "why": "ranking measure with iterator/context \u2014 listed scenario; classic context bug"
+  },
+  {
+    "query": "i need a weighted average price = SUMX(units*price)/SUM(units), not sure if i should use an iterator here",
+    "should_trigger": true,
+    "why": "iterator SUMX row-by-row math then aggregate \u2014 Step 4 of workflow"
+  },
+  {
+    "query": "set up a calculation group so all my measures get a 'currency vs USD' variant without rewriting each one",
+    "should_trigger": true,
+    "why": "calculation groups for reusing logic across measures \u2014 listed scenario"
+  },
+  {
+    "query": "my Inventory On Hand measure sums the daily snapshot balance across the whole month and the number is insane",
+    "should_trigger": true,
+    "why": "semi-additive balance naive-SUMmed across time \u2014 the headline failure mode this skill prevents; competes with understanding-fact-additivity but DAX fix wins"
+  },
+  {
+    "query": "clean up nested IF logic in this measure using VAR/RETURN so it's readable and computed once",
+    "should_trigger": true,
+    "why": "VAR/RETURN variables for repeated subexpressions \u2014 Step 5"
+  },
+  {
+    "query": "give me a YTD sales measure and a year-over-year % change for the FY2025 P&L",
+    "should_trigger": false,
+    "why": "YTD and YoY period-over-period belong to applying-time-intelligence"
+  },
+  {
+    "query": "my Account Balance is semi-additive \u2014 which aggregation should I use, last value at period end or average?",
+    "should_trigger": false,
+    "why": "classifying which aggregation a semi-additive fact needs is understanding-fact-additivity"
+  },
+  {
+    "query": "the relationship between Sales and Date isn't filtering my numbers, cross-filter direction looks wrong",
+    "should_trigger": false,
+    "why": "relationship/cross-filter setup is modeling-semantic-data, not DAX"
+  },
+  {
+    "query": "add a calculated column in Power Query that trims and uppercases the customer name before load",
+    "should_trigger": false,
+    "why": "column transformation in Power Query M belongs to transforming-data-power-query, not a DAX calc column"
+  },
+  {
+    "query": "what chart should I use to show profit margin % by store on my retail dashboard?",
+    "should_trigger": false,
+    "why": "choosing a visual for a retail metric is retail-analytics-visualization / mapping-questions-to-charts"
+  },
+  {
+    "query": "this measure is correct but the report is super slow when I drop it on a 200M row table \u2014 how do I speed it up?",
+    "should_trigger": false,
+    "why": "performance of an already-correct measure is optimizing-model-performance"
+  },
+  {
+    "query": "restrict sales reps so each only sees their own region's sales totals using RLS",
+    "should_trigger": false,
+    "why": "row-level filtering by role is securing-row-level-access despite DAX filter expressions"
+  },
+  {
+    "query": "i need a moving 3-month average of revenue to smooth seasonality",
+    "should_trigger": false,
+    "why": "moving average over time periods is applying-time-intelligence"
+  },
+  {
+    "query": "set up drillthrough from the summary page to a customer detail page filtered by the selected customer",
+    "should_trigger": false,
+    "why": "drillthrough navigation is drill-pattern-design / building-interactive-reports, not DAX"
+  },
+  {
+    "query": "build a date table for my model and mark it as the official date table",
+    "should_trigger": false,
+    "why": "creating and marking a date table is modeling-semantic-data (prerequisite to DAX)"
+  }
+]

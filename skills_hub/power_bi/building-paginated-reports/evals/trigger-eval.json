@@ -1,0 +1,102 @@
+[
+  {
+    "query": "I need to produce monthly customer invoices from our SalesInvoice fact table that print every line item across multiple pages with a header and page numbers \u2014 what's the best way in Power BI?",
+    "should_trigger": true,
+    "why": "Invoices that print every row across pages = textbook paginated report use case."
+  },
+  {
+    "query": "how do i make a pixel-perfect printable statement in power bi report builder using a tablix with row groups by AccountID",
+    "should_trigger": true,
+    "why": "Explicitly Report Builder + tablix + printable statement = core RDL skill."
+  },
+  {
+    "query": "my finance team wants to export the full GL detail to PDF, but the Power BI table just shows a scrollbar and only prints what's visible. how do i get all 40k rows onto paper?",
+    "should_trigger": true,
+    "why": "Table truncated to visible rows + needs all rows in PDF \u2014 the defining paginated-report problem without naming RDL."
+  },
+  {
+    "query": "setting up cascading parameters where picking a Region filters the StoreID dropdown in an .rdl report",
+    "should_trigger": true,
+    "why": "Cascading parameters in an RDL file is squarely paginated-report functionality."
+  },
+  {
+    "query": "we need a mail-merge style document, one formatted page per customer, that we can batch print and email each month",
+    "should_trigger": true,
+    "why": "Mail-merge per-customer printable documents is an explicit paginated-report scenario."
+  },
+  {
+    "query": "how do i add repeating column headers on every page and a page break after each department group in report builder",
+    "should_trigger": true,
+    "why": "Repeating headings + page breaks + grouping = pagination configuration in RDL."
+  },
+  {
+    "query": "our auditors want a fixed-layout report exportable to Word, Excel, and PDF with exact A4 margins in inches \u2014 power bi can't seem to do the precise layout",
+    "should_trigger": true,
+    "why": "Precision layout, page size in inches, multi-format render = paginated report strengths."
+  },
+  {
+    "query": "i built an interactive sales dashboard but management says they need a print-ready packing slip version with subreports for each order \u2014 best approach?",
+    "should_trigger": true,
+    "why": "Print-ready packing slips with subreports needs paginated report; competes with interactive but paginated wins."
+  },
+  {
+    "query": "embed a SQL dataset directly inside a single report file (no shared model) to generate a printable purchase order catalog",
+    "should_trigger": true,
+    "why": "Embedded dataset in a single report with no model + printable catalog = RDL authoring."
+  },
+  {
+    "query": "can i schedule a subscription that emails a fully paginated PDF invoice run to AP every Monday?",
+    "should_trigger": true,
+    "why": "Paginated PDF invoice output is the source artifact; valid uncommon framing around paginated reports."
+  },
+  {
+    "query": "my interactive sales report table shows a scrollbar and i want to add a slicer and drillthrough so users can explore by product category",
+    "should_trigger": false,
+    "why": "Wants interactive exploration with slicers/drillthrough \u2014 building-interactive-reports."
+  },
+  {
+    "query": "how do i set up subscriptions and email schedules to share my published Power BI app with the regional managers workspace",
+    "should_trigger": false,
+    "why": "Distribution/subscriptions/app sharing of standard content \u2014 publishing-and-sharing-content."
+  },
+  {
+    "query": "i need report-level filters and bookmarks so an exec can toggle between YTD and prior-year views in our dashboard",
+    "should_trigger": false,
+    "why": "Filters, bookmarks, view toggles in interactive report \u2014 building-interactive-reports."
+  },
+  {
+    "query": "design a one-page executive dashboard layout combining KPI cards, a trend line, and a regional map for the leadership team",
+    "should_trigger": false,
+    "why": "Multi-visual interactive dashboard layout \u2014 dashboard-composition."
+  },
+  {
+    "query": "write the DAX measure for a running invoice total and a margin % so I can show it in my report",
+    "should_trigger": false,
+    "why": "DAX measure authoring (CALCULATE/ratios) \u2014 authoring-dax-measures."
+  },
+  {
+    "query": "apply row level security so each branch manager only sees their own store's invoice rows when they open the report",
+    "should_trigger": false,
+    "why": "RLS role design is the actual need \u2014 securing-row-level-access."
+  },
+  {
+    "query": "my report with the big detail table is super slow to render and the pbix is 2GB, how do i speed it up",
+    "should_trigger": false,
+    "why": "Performance/model size on a slow report \u2014 optimizing-model-performance."
+  },
+  {
+    "query": "connect to our on-prem SQL Server invoice database and decide between Import and DirectQuery for the refresh",
+    "should_trigger": false,
+    "why": "Connector + storage mode + gateway decision \u2014 connecting-data-sources."
+  },
+  {
+    "query": "in power query i need to clean the InvoiceDate column and unpivot the monthly amount columns before loading",
+    "should_trigger": false,
+    "why": "Data shaping/cleaning in Power Query M \u2014 transforming-data-power-query."
+  },
+  {
+    "query": "which chart should i use to show invoice amount by product subcategory broken down over time for the merchandising team?",
+    "should_trigger": false,
+    "why": "Choosing a visual/chart type for a business question \u2014 mapping-questions-to-charts."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "query": "what's the best chart in power bi to show same-store sales growth year over year for our 240 grocery stores?",
+    "should_trigger": true,
+    "why": "Retail same-store sales metric needing a Power BI visual recommendation - core scope."
+  },
+  {
+    "query": "I have a POS fact table at line-item grain and a Product dim (SKU->Brand->Category). How should I visualize top selling categories vs last quarter?",
+    "should_trigger": true,
+    "why": "Retail POS/product hierarchy question mapped to a Power BI visual - target skill."
+  },
+  {
+    "query": "need to build a dashboard showing promotion lift - which products sold more during the coupon/display campaign vs no promo baseline",
+    "should_trigger": true,
+    "why": "Retail promotion/causal-dimension lift visualization - squarely in scope."
+  },
+  {
+    "query": "how do i show sell-through and on-hand inventory by store without double counting the daily snapshots in power bi",
+    "should_trigger": true,
+    "why": "Retail inventory snapshot (semi-additive) visual + DAX guidance is a core use case."
+  },
+  {
+    "query": "build me a report for our online store: conversion rate, basket size, and cart abandonment from the clickstream sessions table",
+    "should_trigger": true,
+    "why": "Ecommerce/clickstream retail metrics visualization - explicitly in scope."
+  },
+  {
+    "query": "what visual works for GMROI by department and how do i write the measure for gross margin return on inventory",
+    "should_trigger": true,
+    "why": "Retail-specific GMROI metric and visual/DAX - target skill territory."
+  },
+  {
+    "query": "our merchandising team wants to see which SKUs are slow movers and at risk of markdown - how to chart that",
+    "should_trigger": true,
+    "why": "Retail product/inventory slow-mover analysis needing a visual, no feature named but clearly retail viz."
+  },
+  {
+    "query": "i want a viz comparing average ticket size and units per transaction across our specialty apparel stores",
+    "should_trigger": true,
+    "why": "Retail POS basket/ticket metrics visualization - in scope."
+  },
+  {
+    "query": "how do I display weekly footfall-to-purchase conversion and attachment rate for the seasonal toy department before black friday",
+    "should_trigger": true,
+    "why": "Uncommon-but-valid retail store conversion/attachment-rate visualization request."
+  },
+  {
+    "query": "ops wants to see promo lift broken down - should I use Key Influencers or Decomposition Tree to find what drove the sales spike during our BOGO sale?",
+    "should_trigger": false,
+    "why": "Retail context but the ask is which AI visual to pick -> ai-powered-analysis-selection."
+  },
+  {
+    "query": "my retail sales report has a Margin % measure summing wrong across product categories - facts are extended cost and gross profit dollars",
+    "should_trigger": false,
+    "why": "Root concern is non-additive ratio aggregation -> understanding-fact-additivity."
+  },
+  {
+    "query": "i need YTD and same-period-last-year sales for our stores plus a 13-week moving average measure in DAX",
+    "should_trigger": false,
+    "why": "Despite retail data, the need is period-over-period/moving-avg DAX -> applying-time-intelligence."
+  },
+  {
+    "query": "connect my POS data sitting in a SQL Server warehouse - should I use DirectQuery or Import for the daily inventory snapshots and how do I schedule refresh?",
+    "should_trigger": false,
+    "why": "Connectivity/storage-mode/refresh question -> connecting-data-sources."
+  },
+  {
+    "query": "store managers should only see their own store's sales rows in the retail dashboard - how do I set that up?",
+    "should_trigger": false,
+    "why": "Per-store data restriction is row-level security -> securing-row-level-access."
+  },
+  {
+    "query": "i want users to click a product category on my retail chart and drill through to the individual POS transactions on another page",
+    "should_trigger": false,
+    "why": "Mechanic asked is drill-through pattern -> drill-pattern-design."
+  },
+  {
+    "query": "the Product dimension from our retail ERP has merged SKU and brand columns and trailing spaces - how do I split and clean it in power query before reporting?",
+    "should_trigger": false,
+    "why": "Data shaping/cleaning in Power Query (M) -> transforming-data-power-query."
+  },
+  {
+    "query": "lay out an executive retail scorecard - what visuals top vs bottom and how to organize sales, inventory, and ecommerce KPIs for a one-page exec view",
+    "should_trigger": false,
+    "why": "Multi-visual layout for an audience -> dashboard-composition."
+  },
+  {
+    "query": "how do I write the CALCULATE measure for net profit excluding markdown sales, with a filter on the Promotion table?",
+    "should_trigger": false,
+    "why": "Pure DAX measure authoring with CALCULATE/filter context -> authoring-dax-measures."
+  },
+  {
+    "query": "my retail sales model with 80M POS rows is super slow to render the matrix - how do I speed it up?",
+    "should_trigger": false,
+    "why": "Performance tuning of a large model/slow report -> optimizing-model-performance."
+  },
+  {
+    "query": "i need a pixel-perfect printable weekly store sales statement to mail to franchise owners with exact margins and page breaks",
+    "should_trigger": false,
+    "why": "Printable RDL paginated report -> building-paginated-reports."
+  }
+]

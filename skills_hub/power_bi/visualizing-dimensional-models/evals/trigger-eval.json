@@ -1,0 +1,102 @@
+[
+  {
+    "query": "I have a Sales fact table at the order-line grain joined to Product, Customer, and Date dims. Whats the right power bi visual to show this without breaking the grain?",
+    "should_trigger": true,
+    "why": "Maps grain + star schema structure to a correct visual - core intent of this skill."
+  },
+  {
+    "query": "my Inventory_Snapshot fact stores on-hand quantity per day. is a sum across dates valid or do i need a different aggregation/visual for this semi-additive measure?",
+    "should_trigger": true,
+    "why": "Semi-additive snapshot fact driving aggregation/visual safety - directly the skill's additivity-to-visual mapping."
+  },
+  {
+    "query": "We modeled an accumulating snapshot fact for our loan pipeline with milestone dates. Which Power BI visual family fits an accumulating snapshot vs a transaction fact?",
+    "should_trigger": true,
+    "why": "Fact table type (accumulating snapshot) determining visual family is step 1 of this skill."
+  },
+  {
+    "query": "I built a star schema in Power BI Desktop. The Store dimension has 4 stores but Product has 30k SKUs. should product go on a bar chart axis or somewhere else given that cardinality?",
+    "should_trigger": true,
+    "why": "Dimension cardinality threshold choosing the visual - step 4/5 of this skill's matrix."
+  },
+  {
+    "query": "which chart should i use for this fact table?",
+    "should_trigger": true,
+    "why": "Casual phrasing of the exact trigger 'which chart for this fact' in the skill description."
+  },
+  {
+    "query": "I keep getting wrong totals when I drop AccountBalance into a card and sum it over the year. it's a month-end balance fact. how do i pick a visual that shows the right number?",
+    "should_trigger": true,
+    "why": "User doesn't name additivity but clearly has a semi-additive balance needing correct visual/aggregation - this skill."
+  },
+  {
+    "query": "transaction fact vs periodic snapshot - does it change what visual I should reach for in Power BI?",
+    "should_trigger": true,
+    "why": "Direct 'transaction vs snapshot visual' trigger phrase from the skill description."
+  },
+  {
+    "query": "Designing a dashboard off our Kimball star schema. Before I place anything, how do I decide detail-level vs summary visuals based on the atomic grain of each fact?",
+    "should_trigger": true,
+    "why": "Grain (atomic vs aggregated) to detail vs summary visual is step 3 of this skill."
+  },
+  {
+    "query": "I have a factless fact table tracking student-course enrollments. since there's no numeric measure, what kind of Power BI visual even makes sense for counting events at this grain?",
+    "should_trigger": true,
+    "why": "Uncommon-but-valid: factless fact / grain-driven visual choice still maps structure to visual - this skill wins over domain skills."
+  },
+  {
+    "query": "Our Date dimension has Year > Quarter > Month > Day. How should the dimension hierarchy shape which visual I use so users can drill the levels?",
+    "should_trigger": true,
+    "why": "Dimension hierarchy driving visual choice is an explicit trigger ('dimension hierarchy drill-down') in this skill."
+  },
+  {
+    "query": "I have a business question 'which products drove the revenue spike last quarter' - what's the best chart type to answer that?",
+    "should_trigger": false,
+    "why": "Question-intent to chart type is the mapping-questions-to-charts sibling, not structure-driven visual choice."
+  },
+  {
+    "query": "Write me a DAX measure for month-end inventory balance using LASTDATE so the semi-additive sum is correct.",
+    "should_trigger": false,
+    "why": "Authoring the DAX itself belongs to authoring-dax-measures / understanding-fact-additivity, not visual selection."
+  },
+  {
+    "query": "I need to set up drill-through from my Sales summary page to a transaction detail page filtered by the selected product.",
+    "should_trigger": false,
+    "why": "Drill-through pattern wiring is drill-pattern-design, not choosing the visual from the model."
+  },
+  {
+    "query": "Build a retail POS dashboard: same-store sales, basket size, promo lift, and out-of-stock rate for our grocery chain.",
+    "should_trigger": false,
+    "why": "Retail-domain visual set for POS/promo/inventory questions is retail-analytics-visualization."
+  },
+  {
+    "query": "How do I define the relationships and set cross-filter direction between my fact and dimension tables to make a proper star schema?",
+    "should_trigger": false,
+    "why": "Building relationships/cardinality/cross-filter is modeling-semantic-data, not visualizing the model."
+  },
+  {
+    "query": "Explain additive vs semi-additive vs non-additive facts and which aggregation function each one allows.",
+    "should_trigger": false,
+    "why": "Deep additivity taxonomy and aggregation rules is the understanding-fact-additivity sibling."
+  },
+  {
+    "query": "I want a Decomposition Tree and Key Influencers to explain why our churn fact spiked - which AI visual fits?",
+    "should_trigger": false,
+    "why": "AI/'why' visuals (Key Influencers, Decomposition Tree) are ai-powered-analysis-selection."
+  },
+  {
+    "query": "In Power Query, how do I unpivot and shape my flat source extract into a proper fact table and conformed dimensions (star schema shaping)?",
+    "should_trigger": false,
+    "why": "Star-schema shaping in Power Query M is transforming-data-power-query, not visual choice."
+  },
+  {
+    "query": "My report with the big Sales fact (200M rows) is super slow. How do I reduce model size and use aggregations to speed up the visuals?",
+    "should_trigger": false,
+    "why": "Performance tuning / aggregations for slow reports is optimizing-model-performance."
+  },
+  {
+    "query": "I need YTD and prior-year-over-year measures on my Revenue fact for the period-over-period trend visual.",
+    "should_trigger": false,
+    "why": "YTD/PoP time-intelligence DAX is applying-time-intelligence, despite the fact-table mention."
+  }
+]

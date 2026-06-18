@@ -1,0 +1,102 @@
+[
+  {
+    "query": "our churn jumped to 14% in the Enterprise segment last quarter and nobody knows why. what factors are actually driving customers to cancel? i have a subscriptions fact table with tenure, plan, support tickets, region",
+    "should_trigger": true,
+    "why": "Classic 'what drives X' root-cause question -> Key influencers AI visual."
+  },
+  {
+    "query": "I need a visual where the sales VP can keep clicking into Region then Store then Category to see where the revenue shortfall is concentrated, and ideally have it pick the biggest contributor automatically",
+    "should_trigger": true,
+    "why": "Free-form drill to locate concentration with AI Splits -> Decomposition tree."
+  },
+  {
+    "query": "can power bi automatically flag the weird spikes and dips in my daily orders line chart and tell me what caused them?",
+    "should_trigger": true,
+    "why": "Spikes/dips over a time series with explanations -> Anomaly detection."
+  },
+  {
+    "query": "the exec doesnt read charts. i want a paragraph at the top of the page that auto-writes the key takeaways and updates when they change the date slicer",
+    "should_trigger": true,
+    "why": "Auto-written takeaways that refresh with filters -> Smart narrative."
+  },
+  {
+    "query": "I want business users to just type questions like 'total sales by region this year' in plain english against my semantic model instead of asking me to build a chart every time",
+    "should_trigger": true,
+    "why": "Self-service natural-language exploration -> Q&A visual."
+  },
+  {
+    "query": "why did our NPS drop in March? surface anything interesting in the survey data that i wouldnt think to filter on",
+    "should_trigger": true,
+    "why": "'Why did X change' plus discovering insights they don't know to ask for -> AI visuals (Key influencers/Anomaly)."
+  },
+  {
+    "query": "patients readmitted within 30 days is up at two of our hospitals. which clinical and demographic factors most increase the likelihood of readmission?",
+    "should_trigger": true,
+    "why": "'Which factors most increase likelihood' is the Key influencers use case even in a services/healthcare context, so this skill wins over services-analytics-visualization."
+  },
+  {
+    "query": "build me an interactive root-cause explorer for gross margin erosion so finance can navigate down product hierarchy and also see a ranked list of what matters most",
+    "should_trigger": true,
+    "why": "Ranked causes + navigable concentration path -> Decomposition tree + Key influencers; wins over financial-services-visualization."
+  },
+  {
+    "query": "is there a smart way in pbi to get it to find unusual patterns in our weekly support ticket volume on its own",
+    "should_trigger": true,
+    "why": "Find unusual patterns in a time series -> Anomaly detection; casual phrasing without naming the feature."
+  },
+  {
+    "query": "i want a visual that explains in words what the chart above is showing for the current selection, like a written summary that talks",
+    "should_trigger": true,
+    "why": "Auto narrative summarizing a visual -> Smart narrative; uncommon phrasing but valid."
+  },
+  {
+    "query": "what's the best chart type to compare quarterly revenue across our 5 product lines - clustered column or line?",
+    "should_trigger": false,
+    "why": "Standard chart-type selection for a known question -> mapping-questions-to-charts."
+  },
+  {
+    "query": "my inventory turns dashboard for the warehouse team feels wrong, what visuals should i use for stock-on-hand vs reorder point by SKU and DC?",
+    "should_trigger": false,
+    "why": "Domain-specific visual selection for supply chain -> supply-chain-visualization."
+  },
+  {
+    "query": "I need to set up drillthrough so clicking a region card takes the user to a detail page filtered to that region, with a back button",
+    "should_trigger": false,
+    "why": "Drillthrough navigation pattern -> drill-pattern-design (or building-interactive-reports)."
+  },
+  {
+    "query": "write a DAX measure that computes year-over-year revenue growth % and handles blank prior year correctly",
+    "should_trigger": false,
+    "why": "DAX authoring / period-over-period -> authoring-dax-measures (or applying-time-intelligence)."
+  },
+  {
+    "query": "the natural language Q&A keeps returning wrong totals because my date table isn't marked and relationships are bidirectional - how do I fix the model?",
+    "should_trigger": false,
+    "why": "Keyword 'Q&A' but the real need is relationships/date table fixes -> modeling-semantic-data."
+  },
+  {
+    "query": "our store managers should only see their own store's data when they open the regional sales report - how do I configure that?",
+    "should_trigger": false,
+    "why": "Per-user data filtering -> securing-row-level-access (RLS), not AI visuals."
+  },
+  {
+    "query": "lay out an executive overview page: KPI cards on top, trend, and a regional breakdown - what's a good arrangement for a C-suite audience?",
+    "should_trigger": false,
+    "why": "Multi-visual layout for an audience -> dashboard-composition."
+  },
+  {
+    "query": "the report with the decomposition tree is super slow on a 200M row model, how do i speed it up - aggregations or what?",
+    "should_trigger": false,
+    "why": "Keyword 'decomposition tree' but the need is performance tuning -> optimizing-model-performance."
+  },
+  {
+    "query": "i want to summarize 12 monthly sales sheets into one query and clean the column types in power query before loading",
+    "should_trigger": false,
+    "why": "Keyword 'summarize' but it's data shaping -> transforming-data-power-query."
+  },
+  {
+    "query": "headcount is a snapshot metric - if i put it in a decomposition tree will it sum wrong across months? how should it aggregate?",
+    "should_trigger": false,
+    "why": "Mentions decomposition tree but core issue is semi-additive aggregation -> understanding-fact-additivity."
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "query": "I finished my Q3 Sales report in Power BI Desktop, how do I get it onto app.powerbi.com so the regional managers can see it?",
+    "should_trigger": true,
+    "why": "Publishing a finished report from Desktop to a service workspace is the skill's core trigger."
+  },
+  {
+    "query": "what's the difference between Member and Contributor in a workspace? trying to figure out which role to give our two junior analysts",
+    "should_trigger": true,
+    "why": "Choosing/assigning workspace roles is explicitly in scope."
+  },
+  {
+    "query": "should i just share the Finance Dashboard directly with the 40 people in the dept or publish an app instead",
+    "should_trigger": true,
+    "why": "Choosing between direct sharing and an app is a named distribution decision."
+  },
+  {
+    "query": "we have execs, ops, and field reps all opening the same workspace but they need to see different reports. can one app show different content to each group?",
+    "should_trigger": true,
+    "why": "App audiences (show/hide content per group) is in scope even though 'audience' isn't named."
+  },
+  {
+    "query": "set up a weekly email so the CFO gets a PDF of the P&L report every Monday morning automatically",
+    "should_trigger": true,
+    "why": "Email subscriptions / scheduled exports are explicitly covered."
+  },
+  {
+    "query": "how do i mark our Corporate Revenue semantic model as Certified so people stop building off random duplicates",
+    "should_trigger": true,
+    "why": "Certifying/promoting (endorsement) content is a named trigger."
+  },
+  {
+    "query": "my team lives in Microsoft Teams, can I pin the Inventory KPI report as a tab in our channel?",
+    "should_trigger": true,
+    "why": "Embedding reports in Teams is explicitly in scope."
+  },
+  {
+    "query": "the controllers want to pull the actuals dataset into Excel and have it refresh on its own, not a static paste",
+    "should_trigger": true,
+    "why": "Analyze in Excel / refreshable Excel workbooks is a named integration trigger."
+  },
+  {
+    "query": "before I delete the old SalesFacts dataset I need to know which reports and dashboards downstream will break",
+    "should_trigger": true,
+    "why": "Data lineage / impact analysis is an uncommon-but-valid named trigger."
+  },
+  {
+    "query": "I want a Viewer to be blocked from seeing other regions' numbers \u2014 is the Viewer role enough or do I need something more in the workspace?",
+    "should_trigger": true,
+    "why": "Competes with securing-row-level-access but the Viewer-role distribution decision is this skill; it hands off to RLS."
+  },
+  {
+    "query": "I set up RLS roles in Manage Roles with a USERPRINCIPALNAME() dynamic filter but a couple users still see all the data, how do i debug the dax",
+    "should_trigger": false,
+    "why": "Configuring/debugging RLS DAX roles belongs to securing-row-level-access."
+  },
+  {
+    "query": "deployment pipeline keeps failing when i promote the workspace from test to prod, the dataset binding doesn't update",
+    "should_trigger": false,
+    "why": "Dev-to-prod pipeline promotion belongs to managing-deployment-lifecycle."
+  },
+  {
+    "query": "as tenant admin how do I turn off the 'export to Excel' setting org-wide in the admin portal?",
+    "should_trigger": false,
+    "why": "Tenant-level admin portal settings belong to administering-and-governing."
+  },
+  {
+    "query": "this published report is super slow to open for viewers, the model is like 4GB \u2014 how do I shrink it?",
+    "should_trigger": false,
+    "why": "Model size reduction and performance belongs to optimizing-model-performance."
+  },
+  {
+    "query": "scheduled refresh on the published dataset keeps failing with a gateway timeout against our on-prem SQL server",
+    "should_trigger": false,
+    "why": "Refresh/gateway data source connectivity belongs to connecting-data-sources."
+  },
+  {
+    "query": "I need a pixel-perfect printable invoice that finance can export and mail to customers \u2014 multi-page with exact margins",
+    "should_trigger": false,
+    "why": "Pixel-perfect printable RDL output belongs to building-paginated-reports, not service subscriptions."
+  },
+  {
+    "query": "embed our customer churn report inside our internal React web app using the powerbi-client js library and an app registration",
+    "should_trigger": false,
+    "why": "Embedding into a custom app via REST/JS SDK belongs to embedding-and-automating."
+  },
+  {
+    "query": "add a slicer panel and bookmarks so viewers can toggle between actuals and budget on the same report page",
+    "should_trigger": false,
+    "why": "Slicers/bookmarks/interactivity belong to building-interactive-reports."
+  },
+  {
+    "query": "how should I lay out the executive dashboard \u2014 what KPIs go top-left vs the detail visuals for a C-suite audience",
+    "should_trigger": false,
+    "why": "Multi-visual dashboard layout for an audience belongs to dashboard-composition."
+  },
+  {
+    "query": "we're standing up a Center of Excellence and want an audit log of who's viewing which reports across all workspaces",
+    "should_trigger": false,
+    "why": "Org-wide auditing/monitoring/COE governance belongs to administering-and-governing."
+  },
+  {
+    "query": "give the marketing security group edit rights to the campaign workspace but read-only on the shared Finance app",
+    "should_trigger": true,
+    "why": "Assigning roles to a security group plus app access is squarely workspace roles + app sharing."
+  },
+  {
+    "query": "i made a live PowerPoint slide from a report tile but it won't refresh during the board meeting",
+    "should_trigger": true,
+    "why": "Live PowerPoint integration of Power BI content is a named trigger."
+  }
+]

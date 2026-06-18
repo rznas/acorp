@@ -1,0 +1,107 @@
+[
+  {
+    "query": "building a bank executive dashboard - what visuals should I use for total deposits, loan balances and net interest margin by branch?",
+    "should_trigger": true,
+    "why": "Core banking dashboard with balances + NIM - exactly this skill's banking domain."
+  },
+  {
+    "query": "I have a monthly account balance snapshot fact. how do I show ending balance over time without it summing wrong across months?",
+    "should_trigger": true,
+    "why": "Semi-additive balance handling in a financial-services context - the defining hazard of this skill."
+  },
+  {
+    "query": "need a CFO budget vs actual report in power bi by GL cost center, want to show variance clearly",
+    "should_trigger": true,
+    "why": "Accounting/GL budget-vs-actual visualization - explicitly in scope."
+  },
+  {
+    "query": "insurance claims dashboard: best way to visualize loss ratio and combined ratio for our P&C lines?",
+    "should_trigger": true,
+    "why": "Insurance claims visuals + loss/combined ratio DAX - squarely this skill."
+  },
+  {
+    "query": "what chart works for premium written vs premium earned by policy type for our auto and home book?",
+    "should_trigger": true,
+    "why": "Insurance premium reporting visual choice - in this skill's domain."
+  },
+  {
+    "query": "credit union report - members have multiple accounts and joint accounts, how do I aggregate balances per household without double counting?",
+    "should_trigger": true,
+    "why": "Household/joint-account weighted balance aggregation - an uncommon but explicitly covered case here."
+  },
+  {
+    "query": "making a branch manager dashboard, which visuals for deposits, withdrawals and new accounts opened this month",
+    "should_trigger": true,
+    "why": "Branch-manager banking dashboard template - directly this skill."
+  },
+  {
+    "query": "our GL has heterogeneous products (checking, mortgage, credit card) - how should I lay out balance reporting for these mixed account types?",
+    "should_trigger": true,
+    "why": "Heterogeneous banking products balance reporting - a niche but in-scope case for this skill."
+  },
+  {
+    "query": "underwriting dashboard for insurance - want to show policy counts, premium and risk metrics, what visuals fit?",
+    "should_trigger": true,
+    "why": "Insurance underwriting dashboard template - listed scope of this skill."
+  },
+  {
+    "query": "i want to chart efficiency ratio and ROA/ROE for the bank over the last 8 quarters, which visual and measure?",
+    "should_trigger": true,
+    "why": "Banking KPI ratios (efficiency, ROA, ROE) visual + DAX - this skill's measure library."
+  },
+  {
+    "query": "my account balance measure sums up across the date dimension and gives huge wrong totals - is balance semi-additive and how do I fix the aggregation?",
+    "should_trigger": false,
+    "why": "General additivity classification/aggregation logic - needs understanding-fact-additivity, not the FS visual skill."
+  },
+  {
+    "query": "write a DAX measure for net interest margin using CALCULATE - struggling with the filter context",
+    "should_trigger": false,
+    "why": "Pure DAX authoring/CALCULATE context help - needs authoring-dax-measures."
+  },
+  {
+    "query": "how do I do YTD and prior-year-over-year for our premium revenue measure in power bi?",
+    "should_trigger": false,
+    "why": "Time-intelligence (YTD/PoP) DAX pattern - needs applying-time-intelligence."
+  },
+  {
+    "query": "set up RLS so each branch manager only sees their own branch's loan and deposit data",
+    "should_trigger": false,
+    "why": "Row-level security by branch - needs securing-row-level-access."
+  },
+  {
+    "query": "our retail bank also runs stores - need a POS sales dashboard with product, promo and inventory visuals",
+    "should_trigger": false,
+    "why": "Retail POS/product/promo visuals despite the bank context - needs retail-analytics-visualization."
+  },
+  {
+    "query": "connect power bi to our core banking SQL Server - import vs directquery for the transactions table?",
+    "should_trigger": false,
+    "why": "Connector + storage-mode decision - needs connecting-data-sources."
+  },
+  {
+    "query": "build the star schema relationships between the GL fact and account/date dimensions, what cardinality and cross-filter direction?",
+    "should_trigger": false,
+    "why": "Semantic modeling relationships/cardinality - needs modeling-semantic-data."
+  },
+  {
+    "query": "the claims report is super slow on our 200M row fact table, how do I speed it up?",
+    "should_trigger": false,
+    "why": "Performance tuning of a large model - needs optimizing-model-performance."
+  },
+  {
+    "query": "clean up the messy ledger export in power query - split account codes and unpivot the monthly balance columns",
+    "should_trigger": false,
+    "why": "Power Query M cleanup/unpivot shaping - needs transforming-data-power-query."
+  },
+  {
+    "query": "create a pixel-perfect printable monthly account statement PDF for each customer with the bank logo",
+    "should_trigger": false,
+    "why": "Pixel-perfect printable RDL statements - needs building-paginated-reports."
+  },
+  {
+    "query": "which power bi AI visual should I use to find what drives high insurance claim amounts - key influencers or decomposition tree?",
+    "should_trigger": false,
+    "why": "Choosing an AI visual (Key Influencers/Decomp Tree) - needs ai-powered-analysis-selection."
+  }
+]

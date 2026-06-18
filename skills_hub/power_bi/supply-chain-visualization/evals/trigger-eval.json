@@ -1,0 +1,102 @@
+[
+  {
+    "query": "I have an inventory snapshot fact table with QtyOnHand per warehouse per day. What Power BI visual should I use to show current stock levels by product and warehouse?",
+    "should_trigger": true,
+    "why": "Core use case: periodic snapshot on-hand levels mapped to a Power BI visual (matrix)."
+  },
+  {
+    "query": "building a procurement dashboard for our vendors - need to show on-time delivery rate and lead time by supplier. which charts work best?",
+    "should_trigger": true,
+    "why": "Procurement/vendor performance + OTD + lead time visual recommendation is squarely in scope."
+  },
+  {
+    "query": "how do I chart inventory turnover and days of supply for each SKU in power bi?",
+    "should_trigger": true,
+    "why": "Inventory turnover and days of supply ranking is a named in-scope question."
+  },
+  {
+    "query": "I want a funnel that shows our order fulfillment pipeline from order placed to picked to shipped to delivered",
+    "should_trigger": true,
+    "why": "Accumulating-snapshot order pipeline -> funnel is explicitly the skill's pipeline pattern."
+  },
+  {
+    "query": "my on-hand qty line chart over the year looks way too high, the numbers are adding up across days and that's wrong",
+    "should_trigger": true,
+    "why": "Semi-additive inventory balance problem (do not SUM on-hand across dates) is the skill's critical rule."
+  },
+  {
+    "query": "need a viz for fill rate and backlog for our distribution center ops report",
+    "should_trigger": true,
+    "why": "Fill rate and backlog (order management/logistics) are named in-scope supply chain questions."
+  },
+  {
+    "query": "what's the best way to show shipment volume trends and stockout counts month over month for the logistics team",
+    "should_trigger": true,
+    "why": "Transaction-fact additive flow (shipments, stockout counts) trend visuals are in scope."
+  },
+  {
+    "query": "we run three plants and i need to compare manufacturing throughput per line, plus show WIP that's sitting at each stage",
+    "should_trigger": true,
+    "why": "Plant/manufacturing throughput visualization is explicitly listed in scope."
+  },
+  {
+    "query": "warehouse mgr wants a gauge showing on-hand vs the min/max reorder thresholds per item, can power bi do that",
+    "should_trigger": true,
+    "why": "Gauge of on-hand vs reorder min/max is an exact fact-type->visual affinity entry."
+  },
+  {
+    "query": "I have receipts, picks, ships and adjustments transactions - want a waterfall going beginning balance -> receipts -> sales -> adjustments -> ending balance",
+    "should_trigger": true,
+    "why": "Inventory transaction waterfall (beg->receipts->sales->adj->end) is a listed pattern, uncommon but valid."
+  },
+  {
+    "query": "my inventory model has on-hand snapshots and I'm not sure whether that fact is additive or semi-additive before I aggregate it anywhere",
+    "should_trigger": false,
+    "why": "Pure additivity classification question -> understanding-fact-additivity, not the supply-chain visual mapping."
+  },
+  {
+    "query": "write a DAX measure to get the last non-empty on-hand balance at period end using CLOSINGBALANCEMONTH",
+    "should_trigger": false,
+    "why": "Authoring the semi-additive period-end DAX itself -> applying-time-intelligence / authoring-dax-measures."
+  },
+  {
+    "query": "I need a star schema in Power Query - shaping our ERP purchase order extract into a fact and conformed vendor/date dimensions",
+    "should_trigger": false,
+    "why": "Data shaping into star schema in Power Query -> transforming-data-power-query, not visualization."
+  },
+  {
+    "query": "set up RLS so each regional warehouse manager only sees their own site's inventory rows",
+    "should_trigger": false,
+    "why": "Row-level security by warehouse -> securing-row-level-access, despite inventory context."
+  },
+  {
+    "query": "our retail merchandising team needs visuals for POS sales, promo lift and ecommerce conversion by product category",
+    "should_trigger": false,
+    "why": "Retail POS/promo/ecommerce visuals -> retail-analytics-visualization, sibling industry skill."
+  },
+  {
+    "query": "connect Power BI to our SAP S/4HANA inventory tables - import vs directquery for a 200M row movements table?",
+    "should_trigger": false,
+    "why": "Connector and storage-mode decision -> connecting-data-sources, not visual selection."
+  },
+  {
+    "query": "how do I add drillthrough from the supplier scorecard page to a detail page filtered to that one vendor's POs?",
+    "should_trigger": false,
+    "why": "Drillthrough navigation pattern -> drill-pattern-design / building-interactive-reports."
+  },
+  {
+    "query": "i want a key influencers visual to find what drives our late shipments - carrier, lane, weight?",
+    "should_trigger": false,
+    "why": "Key Influencers AI visual root-cause -> ai-powered-analysis-selection, despite logistics topic."
+  },
+  {
+    "query": "lay out an executive supply chain dashboard - what goes top-left, how many visuals per page for a C-suite audience",
+    "should_trigger": false,
+    "why": "Multi-visual layout for an audience -> dashboard-composition, not per-question visual mapping."
+  },
+  {
+    "query": "my inventory report with 80M snapshot rows is super slow, performance analyzer shows a measure taking 9 seconds",
+    "should_trigger": false,
+    "why": "Slow report/large model tuning -> optimizing-model-performance, despite inventory data."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "query": "in power bi desktop should i use import or directquery for my SalesFact table? it's like 80 million rows from an on-prem SQL Server",
+    "should_trigger": true,
+    "why": "Core storage-mode decision (Import vs DirectQuery) with data-volume constraint \u2014 exactly this skill."
+  },
+  {
+    "query": "i need my dashboard to show near real-time inventory levels, the warehouse db updates every few minutes. how do i set that up so power bi reflects current stock?",
+    "should_trigger": true,
+    "why": "Data-freshness constraint pushing toward DirectQuery/refresh design \u2014 connecting-data-sources, even though feature isn't named."
+  },
+  {
+    "query": "do i need an on-premises data gateway to schedule refresh for a report connected to our local oracle database?",
+    "should_trigger": true,
+    "why": "Gateway necessity for on-prem source + scheduled refresh \u2014 squarely in this skill."
+  },
+  {
+    "query": "how do i set up incremental refresh on a big transactions table so it only reloads the last 7 days instead of the whole thing every night",
+    "should_trigger": true,
+    "why": "Incremental refresh configuration is explicitly in this skill's scope."
+  },
+  {
+    "query": "i want to combine our published Finance semantic model with a local excel budget file in the same report \u2014 can power bi do that?",
+    "should_trigger": true,
+    "why": "Composite model blending a published model with another source \u2014 listed trigger for this skill."
+  },
+  {
+    "query": "connecting PBI to a Fabric lakehouse \u2014 whats the difference between Direct Lake and importing the tables?",
+    "should_trigger": true,
+    "why": "Storage-mode tradeoff (Direct Lake vs Import) via a Fabric connector \u2014 this skill covers it."
+  },
+  {
+    "query": "get data from sharepoint folder full of monthly csv files, want them appended and refreshed automatically",
+    "should_trigger": true,
+    "why": "Choosing a connector (SharePoint folder) plus refresh setup \u2014 entry-point connect decision for this skill."
+  },
+  {
+    "query": "my directquery report is slow and i keep seeing queries not folding back to the database, is that normal for DQ?",
+    "should_trigger": true,
+    "why": "DirectQuery folding/limits is named explicitly in the skill description; storage-mode behavior, not Power Query authoring."
+  },
+  {
+    "query": "we hit the 8 refresh per day limit on Pro \u2014 what are our options to refresh more often, premium capacity or something?",
+    "should_trigger": true,
+    "why": "Refresh frequency limits and capacity options \u2014 covered under refresh in this skill."
+  },
+  {
+    "query": "can i set a single table to Dual storage mode while the rest stay import in a composite model?",
+    "should_trigger": true,
+    "why": "Per-table storage mode (Dual) within a composite model \u2014 uncommon but valid, central to this skill."
+  },
+  {
+    "query": "in power query editor i need to remove the top 3 junk header rows and unpivot these quarter columns before loading",
+    "should_trigger": false,
+    "why": "Cleaning/shaping steps in Power Query Editor \u2014 belongs to transforming-data-power-query."
+  },
+  {
+    "query": "after i loaded my three tables, how do i create the relationships between DimDate, DimProduct and the sales fact with the right cross-filter direction?",
+    "should_trigger": false,
+    "why": "Relationships/cardinality/cross-filter is modeling-semantic-data, not the connect step."
+  },
+  {
+    "query": "my model is 1.2 GB and the report is super slow, how do i shrink the model size and use aggregations to speed it up?",
+    "should_trigger": false,
+    "why": "Model size reduction + aggregations for performance is optimizing-model-performance."
+  },
+  {
+    "query": "i want regional managers to only see their own region's rows when they open the report \u2014 how do i set that filtering up by their login?",
+    "should_trigger": false,
+    "why": "Dynamic per-user data filtering is row-level security \u2014 securing-row-level-access."
+  },
+  {
+    "query": "what's the best way to publish this report to a workspace and share it with the finance team as an app with scheduled email subscriptions?",
+    "should_trigger": false,
+    "why": "Workspaces/apps/sharing/subscriptions is publishing-and-sharing-content (refresh keyword overlaps but intent is distribution)."
+  },
+  {
+    "query": "i have a Sales[Amount] column and want a YTD measure plus a year-over-year % change for the dashboard",
+    "should_trigger": false,
+    "why": "YTD and period-over-period DAX is applying-time-intelligence."
+  },
+  {
+    "query": "set up deployment pipeline so this report flows from dev to test to prod workspaces with parameterized data source per stage",
+    "should_trigger": false,
+    "why": "Dev/test/prod pipeline + ALM is managing-deployment-lifecycle (mentions data source but intent is lifecycle)."
+  },
+  {
+    "query": "which chart should i use to show sales contribution by category as part of total revenue \u2014 pie, treemap or stacked bar?",
+    "should_trigger": false,
+    "why": "Translating a business question to a chart type is mapping-questions-to-charts."
+  },
+  {
+    "query": "i want a Key Influencers visual to explain what drives customer churn in my retention dataset",
+    "should_trigger": false,
+    "why": "Key Influencers / AI visual selection is ai-powered-analysis-selection."
+  },
+  {
+    "query": "as tenant admin i need to control which data source connectors users are allowed to use and audit who is connecting to what",
+    "should_trigger": false,
+    "why": "Tenant settings/governance/auditing of connector usage is administering-and-governing (connector keyword overlaps but it's admin policy, not building a connection)."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "query": "I have a Sales Overview page with a Region slicer and a Product Category slicer. How do I make it so clicking the Region slicer filters the matrix but NOT the KPI cards at the top?",
+    "should_trigger": true,
+    "why": "Editing visual interactions (filter/none per pair) is core to this skill."
+  },
+  {
+    "query": "want to add buttons on my exec dashboard page so users can jump between the Summary, Detail, and Trend tabs without using the page tabs at the bottom",
+    "should_trigger": true,
+    "why": "Page navigation buttons/navigators are a primary feature of this skill."
+  },
+  {
+    "query": "Set up a bookmark that hides the YoY columns and another that shows them, with a toggle button to switch between the two states on my Finance report",
+    "should_trigger": true,
+    "why": "Capturing report state in bookmarks + toggle button is exactly this skill."
+  },
+  {
+    "query": "On my Customer 360 report I want users to right-click a customer name and go to a focused page showing just that customer's orders, payments and tickets",
+    "should_trigger": true,
+    "why": "Describes a drillthrough page (filter scope = drillthrough) without naming it; this skill's domain."
+  },
+  {
+    "query": "how do i make a hover popup that shows a mini trend chart when you mouse over a bar in the revenue visual",
+    "should_trigger": true,
+    "why": "Report-page tooltips are listed explicitly in the skill's When to Use."
+  },
+  {
+    "query": "Need to make my Operations report usable on phones \u2014 the layout is a mess in the Power BI mobile app, visuals overlap",
+    "should_trigger": true,
+    "why": "Building the portrait mobile layout is Step 7 of this skill."
+  },
+  {
+    "query": "color the cells of my matrix red/yellow/green based on whether each store hit its margin target, and add data bars to the units column",
+    "should_trigger": true,
+    "why": "Conditional formatting of tables/matrices is in scope (data bars, rules-based color)."
+  },
+  {
+    "query": "i set up a slicer but when readers open the report it resets \u2014 can i lock a default filter selection and also let them clear all slicers with one button?",
+    "should_trigger": true,
+    "why": "Slicer behavior + a clear-all bookmark/button is interactive-report authoring."
+  },
+  {
+    "query": "I want one chart to highlight the related slice in the donut chart when I click a column, instead of filtering everything else out",
+    "should_trigger": true,
+    "why": "Cross-highlight vs cross-filter is the visual-interactions decision this skill owns; competes with mapping-questions-to-charts but wins."
+  },
+  {
+    "query": "apply a consistent corporate color theme across all the pages of the report and save it so new visuals pick it up automatically",
+    "should_trigger": true,
+    "why": "Applying a report theme is Step 6 of this skill."
+  },
+  {
+    "query": "My matrix lets me expand from Category to Subcategory to Product by clicking the +. How do I configure that drill-down hierarchy and the drill buttons in the visual header?",
+    "should_trigger": false,
+    "why": "Drill up/down within a single visual -> drill-pattern-design (the skill explicitly defers this)."
+  },
+  {
+    "query": "Which chart should I use to show monthly sales vs target with the variance \u2014 clustered bars, a bullet chart, or a line+column combo?",
+    "should_trigger": false,
+    "why": "Choosing the chart type for a business question -> mapping-questions-to-charts."
+  },
+  {
+    "query": "I built the report in Desktop, now I need to publish it to the Marketing workspace and share it with the sales team via an app with the right permissions",
+    "should_trigger": false,
+    "why": "Workspaces, apps, sharing and permissions -> publishing-and-sharing-content."
+  },
+  {
+    "query": "Regional managers should only see their own region's rows in every visual automatically based on their login \u2014 how do I set that up?",
+    "should_trigger": false,
+    "why": "Per-user data restriction by login = dynamic RLS -> securing-row-level-access, not report filters."
+  },
+  {
+    "query": "How do I lay out 6 visuals on a single executive dashboard page \u2014 what goes top-left, sizing, grouping for an exec audience?",
+    "should_trigger": false,
+    "why": "Multi-visual layout/composition for an audience -> dashboard-composition."
+  },
+  {
+    "query": "I want a Key Influencers visual to show what drives customer churn, and a decomposition tree to break it down by segment",
+    "should_trigger": false,
+    "why": "AI visuals (Key Influencers, Decomposition Tree) -> ai-powered-analysis-selection."
+  },
+  {
+    "query": "Add a measure that computes YTD sales and % of total, then I'll use it to color my table \u2014 can you write the DAX?",
+    "should_trigger": false,
+    "why": "Writing the DAX measure -> authoring-dax-measures (the measure feeds, but the ask is the DAX itself)."
+  },
+  {
+    "query": "the report is super slow when i open it, the matrix takes 15 seconds \u2014 how do i find the slow visual and speed it up?",
+    "should_trigger": false,
+    "why": "Slow report diagnosis with Performance Analyzer -> optimizing-model-performance."
+  },
+  {
+    "query": "I need a pixel-perfect printable invoice-style report with a fixed A4 layout and page footers that I can export to PDF",
+    "should_trigger": false,
+    "why": "Pixel-perfect printable RDL -> building-paginated-reports, not interactive report pages."
+  },
+  {
+    "query": "set the relationship between FactSales and DimDate to single-direction and make the slicer on the date table filter the fact correctly",
+    "should_trigger": false,
+    "why": "Cross-filter direction at the model/relationship level -> modeling-semantic-data (despite 'slicer/filter' keywords)."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "query": "my Sales Overview report takes like 40 seconds to open and even longer when i move the Region slicer, how do i make it faster",
+    "should_trigger": true,
+    "why": "Slow report load + slow slicer interaction is the core diagnostic use case for this skill."
+  },
+  {
+    "query": "The Finance.pbix model is 2.3 GB and won't refresh on our Pro workspace anymore, it says it exceeds the limit. What can I drop to shrink it?",
+    "should_trigger": true,
+    "why": "Oversized Import model exceeding shared-capacity 1GB cap -> reduce model size, the skill's biggest win."
+  },
+  {
+    "query": "how do i use Performance Analyzer to figure out which visual on my dashboard is the slow one",
+    "should_trigger": true,
+    "why": "Performance Analyzer triage to find the bottleneck visual is explicitly in scope."
+  },
+  {
+    "query": "our daily refresh of the inventory dataset went from 8 min to 35 min after I added a few columns in Power Query, refresh is timing out now",
+    "should_trigger": true,
+    "why": "Slow/timing-out refresh, likely broken query folding from added steps -> environment/source+folding tuning."
+  },
+  {
+    "query": "I have a fact table with 400 million rows in DirectQuery and the queries are hammering our Snowflake warehouse, can aggregations help speed this up",
+    "should_trigger": true,
+    "why": "Aggregation tables for a large DirectQuery model is a named technique in the skill."
+  },
+  {
+    "query": "should i split my one giant pbix into a shared dataset and separate thin report so 12 reports stop each carrying their own copy of the model",
+    "should_trigger": true,
+    "why": "Report/model separation for reuse and performance is explicitly listed in When to Use."
+  },
+  {
+    "query": "page with the YTD revenue card and 14 other visuals is super laggy, profiler shows one DAX measure taking 9 seconds, how do I tune it",
+    "should_trigger": true,
+    "why": "A specific DAX measure identified as the bottleneck -> performance tuning of expensive DAX, this skill wins over authoring-dax."
+  },
+  {
+    "query": "model memory keeps ballooning, i think a high-cardinality TransactionID column and auto date/time are bloating it, what should i disable",
+    "should_trigger": true,
+    "why": "Reducing model size via cardinality and disabling auto date/time is a named size-reduction technique."
+  },
+  {
+    "query": "composite model with an aggregated import layer over a directquery detail table feels sluggish on drillthrough, is there a way to profile where the time goes",
+    "should_trigger": true,
+    "why": "Tuning Composite model performance and profiling where time goes is in scope (uncommon-but-valid)."
+  },
+  {
+    "query": "execs complain the regional ops dashboard is too slow to be usable in the morning rush, need to make the whole thing snappier without losing the visuals",
+    "should_trigger": true,
+    "why": "Slow report performance for an audience; casual phrasing, doesn't name a feature but clearly needs perf tuning."
+  },
+  {
+    "query": "my star schema relationships are giving wrong totals because the cross-filter direction between Customer and Sales is set to both, how do i fix the model",
+    "should_trigger": false,
+    "why": "Correctness of relationships/cross-filter direction is modeling-semantic-data, not a performance problem."
+  },
+  {
+    "query": "I need to clean and reshape the raw CSV exports in Power Query into a proper star schema before loading, what M steps do I use",
+    "should_trigger": false,
+    "why": "Shaping data into a star schema in Power Query is transforming-data-power-query, not perf optimization."
+  },
+  {
+    "query": "which chart should i use to show inventory days-on-hand trend across 8 warehouses for a supply chain review",
+    "should_trigger": false,
+    "why": "Choosing the right visual for a supply chain question is supply-chain-visualization."
+  },
+  {
+    "query": "should I use Import or DirectQuery for connecting to our Azure SQL source, and do I need a gateway for scheduled refresh",
+    "should_trigger": false,
+    "why": "Choosing storage mode and setting up a gateway/connector is connecting-data-sources, not tuning an existing slow model."
+  },
+  {
+    "query": "write a CALCULATE measure that returns prior-year sales filtered to completed orders only, my context isn't working",
+    "should_trigger": false,
+    "why": "Authoring a DAX measure for correct logic/filter context is authoring-dax-measures, not performance tuning."
+  },
+  {
+    "query": "set up dynamic RLS so regional managers only see their own territory rows in the Sales model",
+    "should_trigger": false,
+    "why": "Restricting rows per user via RLS is securing-row-level-access; 'restrict/reduce rows' overlaps but intent is security."
+  },
+  {
+    "query": "I want to move my report from the dev workspace through test to prod automatically using deployment pipelines and TMDL",
+    "should_trigger": false,
+    "why": "Promoting content dev->test->prod is managing-deployment-lifecycle, not model performance."
+  },
+  {
+    "query": "how do I add bookmarks and a slicer panel with buttons so users can toggle between regions on this report page",
+    "should_trigger": false,
+    "why": "Building interactive navigation (bookmarks/slicers/buttons) is building-interactive-reports, not perf."
+  },
+  {
+    "query": "our P1 capacity is throttling and admins want to monitor CPU and memory usage across the tenant, where do I see that",
+    "should_trigger": false,
+    "why": "Tenant-wide capacity monitoring/auditing is administering-and-governing; 'capacity/memory' overlaps but it's a governance task."
+  },
+  {
+    "query": "the monthly account balance is a semi-additive measure, how should I aggregate it across time so the visual doesn't show wrong totals",
+    "should_trigger": false,
+    "why": "Correct aggregation of a semi-additive fact for accuracy is understanding-fact-additivity, not performance."
+  }
+]

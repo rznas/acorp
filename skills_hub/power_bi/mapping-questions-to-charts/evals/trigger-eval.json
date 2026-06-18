@@ -1,0 +1,102 @@
+[
+  {
+    "query": "my CFO keeps asking 'what are our top 10 products by revenue this year' - what visual should i build for that in power bi?",
+    "should_trigger": true,
+    "why": "comparison/top-N business question needing a chart choice \u2014 core skill intent"
+  },
+  {
+    "query": "the stakeholder wants to know how monthly sales have trended since 2022, which chart type fits best?",
+    "should_trigger": true,
+    "why": "trend question mapped to a Power BI visual \u2014 core intent"
+  },
+  {
+    "query": "i need to show what percentage of total support tickets each team handles. column chart, pie, or donut?",
+    "should_trigger": true,
+    "why": "part-to-whole intent, picking among chart types \u2014 core intent"
+  },
+  {
+    "query": "We have a question from the board: where are most of our customers located across the US? Need to pick the right Power BI visual.",
+    "should_trigger": true,
+    "why": "geographic intent \u2192 map visual selection \u2014 core intent"
+  },
+  {
+    "query": "boss asked 'are we on track vs our quarterly target of 5M' \u2014 single KPI number, what's the best way to show it",
+    "should_trigger": true,
+    "why": "KPI/goal vs target intent \u2192 card/gauge/KPI visual choice \u2014 core intent"
+  },
+  {
+    "query": "got a vague request 'show me the relationship between marketing spend and conversions' and idk if i should use a scatter or what",
+    "should_trigger": true,
+    "why": "distribution/correlation intent \u2192 scatter plot mapping \u2014 core intent"
+  },
+  {
+    "query": "i'm building a sales dashboard and the requirement doc literally lists questions like 'which region sells most' and 'how did revenue change over time' \u2014 help me figure out what chart goes with each",
+    "should_trigger": true,
+    "why": "multiple business questions each needing chart-type mapping \u2014 core intent, compound"
+  },
+  {
+    "query": "what kind of chart best answers 'how do leads drop off from prospect to closed-won' in our funnel data",
+    "should_trigger": true,
+    "why": "process/stage funnel intent \u2192 funnel visual selection \u2014 core intent"
+  },
+  {
+    "query": "exec emailed me 'why did our churn rate jump last quarter' and wants a visual in the report \u2014 what should i drop on the page to answer that?",
+    "should_trigger": true,
+    "why": "root-cause question; competes with ai-powered-analysis but the ask is choosing a visual to answer the question \u2014 this skill wins on intent classification"
+  },
+  {
+    "query": "someone asked me to compare average deal size across the 5 sales reps, not sure if bar chart is right or something fancier",
+    "should_trigger": true,
+    "why": "comparison-by-category intent \u2192 bar vs alternatives mapping \u2014 core intent"
+  },
+  {
+    "query": "my decomposition tree isn't breaking down the way i want when i expand by region then product, how do i control the expansion order",
+    "should_trigger": false,
+    "why": "configuring a specific AI visual's behavior \u2192 ai-powered-analysis-selection"
+  },
+  {
+    "query": "i want the user to click a bar in the sales-by-category chart and jump to a detailed transactions page for that category",
+    "should_trigger": false,
+    "why": "drill-through navigation between pages \u2192 drill-pattern-design"
+  },
+  {
+    "query": "how do i write the DAX measure for year-to-date sales so my line chart shows YTD instead of monthly totals",
+    "should_trigger": false,
+    "why": "the chart is chosen; the need is the YTD calculation \u2192 applying-time-intelligence"
+  },
+  {
+    "query": "i have 6 visuals for the exec team \u2014 how should i arrange them on the canvas so the most important KPIs are top-left and it reads well",
+    "should_trigger": false,
+    "why": "laying out an existing set of visuals for an audience \u2192 dashboard-composition"
+  },
+  {
+    "query": "inventory on-hand quantity is getting summed across months in my chart and the totals are wrong, the year total is way too high",
+    "should_trigger": false,
+    "why": "semi-additive aggregation problem, not chart selection \u2192 understanding-fact-additivity"
+  },
+  {
+    "query": "the bar chart for store sales is super slow to render on our 200M row model, takes 15 seconds to load",
+    "should_trigger": false,
+    "why": "performance of an existing visual \u2192 optimizing-model-performance"
+  },
+  {
+    "query": "i need slicers and bookmarks so users can toggle between the revenue view and the units view on the same report page",
+    "should_trigger": false,
+    "why": "interactive controls/bookmarks, not chart-type choice \u2192 building-interactive-reports"
+  },
+  {
+    "query": "for our retail POS data, what's the standard set of visuals people use to analyze promo lift and basket size?",
+    "should_trigger": false,
+    "why": "retail-domain visual playbook \u2192 retail-analytics-visualization"
+  },
+  {
+    "query": "what's the right cross-filter direction between my Date table and FactSales so the trend chart filters correctly?",
+    "should_trigger": false,
+    "why": "relationship/cross-filter modeling, not chart selection \u2192 modeling-semantic-data"
+  },
+  {
+    "query": "the matrix visual has Account Balance and i can't tell if it should average or take the last value at the period end",
+    "should_trigger": false,
+    "why": "semi-additive balance aggregation choice \u2192 understanding-fact-additivity"
+  }
+]

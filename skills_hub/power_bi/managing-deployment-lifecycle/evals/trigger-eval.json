@@ -1,0 +1,102 @@
+[
+  {
+    "query": "how do I set up a deployment pipeline in Fabric so my Sales semantic model moves from Dev workspace to Test then Prod automatically?",
+    "should_trigger": true,
+    "why": "Core intent: Fabric deployment pipelines promoting content dev->test->prod."
+  },
+  {
+    "query": "we keep editing reports straight in the production workspace and breaking stuff. whats the right way to stage changes before they go live?",
+    "should_trigger": true,
+    "why": "Describes need for separate dev/test/prod environments and ALM staging without naming the feature."
+  },
+  {
+    "query": "I want to save my .pbix as .pbip with TMDL so I can commit the model metadata to our git repo and do proper code reviews",
+    "should_trigger": true,
+    "why": "Source-control-friendly formats (.pbip/TMDL) and Git integration are squarely in scope."
+  },
+  {
+    "query": "Need to configure deployment rules so the connection string points to the test SQL server in the test stage and the prod server in prod",
+    "should_trigger": true,
+    "why": "Deployment rules within deployment pipelines is an explicit in-scope task."
+  },
+  {
+    "query": "we're retiring our old SSRS reports and moving everything to Power BI, whats a good high level migration plan and rollout order?",
+    "should_trigger": true,
+    "why": "High-level migration from a legacy BI platform (SSRS) is explicitly called out."
+  },
+  {
+    "query": "should I use Fabric git integration, azure pipelines, or just publish from desktop for promoting our finance models between environments?",
+    "should_trigger": true,
+    "why": "Choosing a deployment/publish mechanism across environments is core scope."
+  },
+  {
+    "query": "how do I use the TMDL view in Power BI Desktop to script and back up changes to my date dimension before applying them?",
+    "should_trigger": true,
+    "why": "Using the TMDL view to script/preview/apply/back up model metadata is in scope."
+  },
+  {
+    "query": "running the six lifecycle stages plan develop validate deploy support retire for our customer churn model \u2014 what checklist do I follow at each stage?",
+    "should_trigger": true,
+    "why": "The six content-lifecycle stages are a central in-scope framework."
+  },
+  {
+    "query": "how many workspaces should we have for our BI content and how do report and model workspaces link across the stages?",
+    "should_trigger": true,
+    "why": "Deciding number of environments and how report/model workspaces link across stages is in scope."
+  },
+  {
+    "query": "I separated the report from the semantic model into a thin report pbip and now I need to promote both through test to prod without breaking the binding",
+    "should_trigger": true,
+    "why": "Separating report from model plus promotion across environments; competes with optimizing-model but lifecycle/promotion wins."
+  },
+  {
+    "query": "how do I publish my finished dashboard to a workspace and share it with the marketing team via an app with the right viewer roles?",
+    "should_trigger": false,
+    "why": "Sharing/apps/roles is publishing-and-sharing-content, not lifecycle promotion."
+  },
+  {
+    "query": "our tenant admin needs to lock down which users can export data and review the audit logs across all workspaces",
+    "should_trigger": false,
+    "why": "Tenant settings/auditing/governance is administering-and-governing."
+  },
+  {
+    "query": "the prod report is super slow on a 4GB model, how do I reduce model size and use Performance Analyzer to find the bottleneck?",
+    "should_trigger": false,
+    "why": "Performance tuning is optimizing-model-performance, not lifecycle/deployment."
+  },
+  {
+    "query": "I need dynamic RLS so regional managers only see their own territory's sales when the report is in production",
+    "should_trigger": false,
+    "why": "Row-level security setup is securing-row-level-access, despite the production mention."
+  },
+  {
+    "query": "set up scheduled refresh for my model through the on-prem data gateway after I deploy it",
+    "should_trigger": false,
+    "why": "Gateway/refresh config is connecting-data-sources; deploy is incidental."
+  },
+  {
+    "query": "how do I embed this Power BI report in our internal React portal and automate exports with the REST API?",
+    "should_trigger": false,
+    "why": "Embedding + REST automation is embedding-and-automating."
+  },
+  {
+    "query": "write me the DAX measure for YTD sales vs prior year that I'll use in the model I'm about to ship",
+    "should_trigger": false,
+    "why": "Time-intelligence DAX is applying-time-intelligence; shipping is incidental."
+  },
+  {
+    "query": "build the relationships and set cross-filter direction in my star schema before I promote it anywhere",
+    "should_trigger": false,
+    "why": "Modeling relationships/cardinality is modeling-semantic-data, not deployment."
+  },
+  {
+    "query": "I want to endorse our certified semantic model and set up a subscription so execs get the report by email every Monday",
+    "should_trigger": false,
+    "why": "Endorsement/subscriptions/sharing is publishing-and-sharing-content."
+  },
+  {
+    "query": "in Power Query I need to clean and merge the raw CSV staging files and make sure query folding still works before the model is finalized",
+    "should_trigger": false,
+    "why": "Power Query M cleaning/query folding is transforming-data-power-query."
+  }
+]

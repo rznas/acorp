@@ -1,0 +1,102 @@
+[
+  {
+    "query": "I need each regional sales manager to only see their own region's rows when they open our shared Sales.pbix. How do I set that up?",
+    "should_trigger": true,
+    "why": "Classic per-user row restriction in a shared model = RLS, target skill."
+  },
+  {
+    "query": "set up dynamic rls using userprincipalname so reps only see their accounts based on a UserEmail column in DimSalesperson",
+    "should_trigger": true,
+    "why": "Dynamic RLS with USERPRINCIPALNAME() is explicitly the target skill's core."
+  },
+  {
+    "query": "our HR model has a Salary column in DimEmployee that only the comp team should ever see, but everyone uses the same report. how do i hide just that column?",
+    "should_trigger": true,
+    "why": "Hiding sensitive columns is object-level security (OLS), covered by this skill."
+  },
+  {
+    "query": "A manager needs to see sales for their whole team including everyone reporting under them down the org chart. How do I build that security in Power BI?",
+    "should_trigger": true,
+    "why": "Hierarchical manager-sees-team security via bridge/security table is in-scope."
+  },
+  {
+    "query": "after i published the report one user says they see no data at all and another says they can see every region. roles are configured. whats wrong?",
+    "should_trigger": true,
+    "why": "Diagnosing user sees all/no data is an explicit RLS troubleshooting trigger."
+  },
+  {
+    "query": "how do i apply microsoft purview sensitivity labels like Confidential to our finance semantic model?",
+    "should_trigger": true,
+    "why": "Sensitivity labels / information protection are listed in scope."
+  },
+  {
+    "query": "should i build one model with RLS roles per country or just publish a separate pbix for each country team?",
+    "should_trigger": true,
+    "why": "Static-vs-dynamic / RLS-vs-separate-models decision is the skill's first core decision."
+  },
+  {
+    "query": "my rls role works in desktop with View As but the totals look broken in the service because I have a bidirectional relationship between DimRegion and FactSales",
+    "should_trigger": true,
+    "why": "RLS behaving unexpectedly with bidirectional relationships is an explicit trigger."
+  },
+  {
+    "query": "we want to pass a tenant id through CUSTOMDATA from our embedded app so each customer only sees their own rows",
+    "should_trigger": true,
+    "why": "CUSTOMDATA()-based row filtering for multitenancy is an uncommon-but-valid RLS case."
+  },
+  {
+    "query": "how do I test that my Midwest role actually filters correctly before I publish? want to verify what a Midwest user would see",
+    "should_trigger": true,
+    "why": "Testing roles with View As is explicitly part of this skill."
+  },
+  {
+    "query": "I'm rolling out our app to the sales workspace and need to assign Viewer vs Member roles and decide who gets the app vs direct workspace access",
+    "should_trigger": false,
+    "why": "Workspace roles / app distribution is publishing-and-sharing-content, not data-row RLS."
+  },
+  {
+    "query": "set the cross-filter direction between DimDate and FactSales to single and fix the cardinality on my star schema relationships",
+    "should_trigger": false,
+    "why": "Relationships/cardinality/cross-filter setup is modeling-semantic-data."
+  },
+  {
+    "query": "the tenant admin needs to lock down who can export data and turn off publish-to-web across the org, plus set up audit logging",
+    "should_trigger": false,
+    "why": "Tenant settings, export controls and auditing are administering-and-governing."
+  },
+  {
+    "query": "write a DAX measure that calculates net margin % and only counts active customers using CALCULATE with a filter",
+    "should_trigger": false,
+    "why": "Authoring a CALCULATE measure is authoring-dax-measures, not a security filter rule."
+  },
+  {
+    "query": "my big 4GB model is slow and refreshes time out, how do I reduce size and find the bottleneck with Performance Analyzer?",
+    "should_trigger": false,
+    "why": "Model size/performance tuning is optimizing-model-performance."
+  },
+  {
+    "query": "I want to filter the report by region using a slicer so users can pick their own region from a dropdown on the dashboard",
+    "should_trigger": false,
+    "why": "Interactive slicer-based filtering (user-driven, not security) is building-interactive-reports."
+  },
+  {
+    "query": "promote my report from the dev workspace to test then prod using deployment pipelines without breaking the data source bindings",
+    "should_trigger": false,
+    "why": "Dev-to-prod promotion is managing-deployment-lifecycle."
+  },
+  {
+    "query": "how do I add a Key Influencers visual to understand what drives customer churn in my retention dashboard?",
+    "should_trigger": false,
+    "why": "AI visual selection is ai-powered-analysis-selection."
+  },
+  {
+    "query": "connecting to our Azure SQL warehouse, should I use DirectQuery or Import for the FactSales table and how do I set up the gateway?",
+    "should_trigger": false,
+    "why": "Connector / storage mode / gateway is connecting-data-sources."
+  },
+  {
+    "query": "I need a pixel-perfect printable invoice report grouped by customer that exports cleanly to PDF for each account manager",
+    "should_trigger": false,
+    "why": "Pixel-perfect printable RDL output is building-paginated-reports (per-user delivery is not RLS)."
+  }
+]

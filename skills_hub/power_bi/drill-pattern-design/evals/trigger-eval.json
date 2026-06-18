@@ -1,0 +1,102 @@
+[
+  {
+    "query": "I have a column chart of Sales Amount by Year. How do I let users click into a year to see quarters then months?",
+    "should_trigger": true,
+    "why": "Classic drill-down along a date hierarchy on a chart axis \u2014 core target intent."
+  },
+  {
+    "query": "want users to click a product in my matrix and jump to a page showing every individual transaction line for that SKU",
+    "should_trigger": true,
+    "why": "Summary-to-detail drill-through to a filtered detail page \u2014 core target intent."
+  },
+  {
+    "query": "On my retail dashboard I need to show inventory on hand right next to sales for the same product and store. They're in different fact tables.",
+    "should_trigger": true,
+    "why": "Multi-fact comparison over conformed dimensions = drill-across; beats retail-analytics-visualization which only picks single visuals."
+  },
+  {
+    "query": "how do i set up a decomposition tree so people can explore profit by region then category then customer in any order",
+    "should_trigger": true,
+    "why": "Decomposition tree used for free-order hierarchical drilling \u2014 explicitly in target scope; wins over ai-powered-analysis-selection because intent is drill navigation."
+  },
+  {
+    "query": "my drillthrough detail page is super slow when users click from the summary, takes 8+ seconds to filter the transactions",
+    "should_trigger": true,
+    "why": "Drill-through performance is an explicit trigger keyword in the skill."
+  },
+  {
+    "query": "need a back button and breadcrumb so users can return to the overview after they dig into a customer's order detail",
+    "should_trigger": true,
+    "why": "Back button / breadcrumbs are part of designing drill-through navigation."
+  },
+  {
+    "query": "users keep dead-ending at the summary numbers on the exec page and cant get to the underlying rows, how should i design the navigation",
+    "should_trigger": true,
+    "why": "Describes the summary dead-end problem the skill solves without naming drill-through."
+  },
+  {
+    "query": "set up the Product Dept > Category > Brand > SKU hierarchy so the bar chart drill icons expand to the next level",
+    "should_trigger": true,
+    "why": "Building a product hierarchy for built-in drill-down icons \u2014 core target intent."
+  },
+  {
+    "query": "i want to compare shipments fact and orders fact by the same Date and Customer dimension on one report \u2014 what's the right approach",
+    "should_trigger": true,
+    "why": "Two fact tables sharing conformed dimensions = drill-across pattern selection."
+  },
+  {
+    "query": "should a report tooltip page that shows transaction details on hover count as drill, and how do i wire it to the clicked category",
+    "should_trigger": true,
+    "why": "Report tooltips / detail-on-hover are listed triggers; uncommon-but-valid drill-pattern case."
+  },
+  {
+    "query": "how do i add a year/quarter/month date hierarchy to my model and mark the date table for time intelligence",
+    "should_trigger": false,
+    "why": "Building/marking a date table in the model belongs to modeling-semantic-data, not drill navigation design."
+  },
+  {
+    "query": "I need a YTD vs prior-year YTD measure broken down by quarter for the finance report",
+    "should_trigger": false,
+    "why": "Period-over-period YTD DAX belongs to applying-time-intelligence."
+  },
+  {
+    "query": "add slicers and a bookmark toggle so users can switch between the sales and margin views on my dashboard",
+    "should_trigger": false,
+    "why": "Slicers/bookmarks/buttons interactivity is building-interactive-reports, not drill pattern selection."
+  },
+  {
+    "query": "which chart should i use to show sales contribution by category \u2014 treemap, pie, or stacked bar?",
+    "should_trigger": false,
+    "why": "Chart-type selection for a business question is mapping-questions-to-charts (treemap overlaps but no drill intent)."
+  },
+  {
+    "query": "my inventory snapshot is semi-additive \u2014 how do i aggregate on-hand quantity correctly so it doesn't sum across dates",
+    "should_trigger": false,
+    "why": "Semi-additive aggregation handling is understanding-fact-additivity."
+  },
+  {
+    "query": "the matrix visual takes forever to render with 12 million transaction rows, how do i speed up the model",
+    "should_trigger": false,
+    "why": "Large-model/render performance tuning is optimizing-model-performance, not drill-through design."
+  },
+  {
+    "query": "set cross-filter direction between the Sales fact and Product dimension so the relationship filters both ways",
+    "should_trigger": false,
+    "why": "Relationship cardinality/cross-filter setup is modeling-semantic-data."
+  },
+  {
+    "query": "i want a Key Influencers visual to tell me what drives customer churn on the telecom dashboard",
+    "should_trigger": false,
+    "why": "Key Influencers AI visual selection is ai-powered-analysis-selection."
+  },
+  {
+    "query": "build a pixel-perfect printable invoice in Report Builder that drills the customer's line items for billing",
+    "should_trigger": false,
+    "why": "Pixel-perfect RDL invoice output is building-paginated-reports despite 'drills' wording."
+  },
+  {
+    "query": "how do i lay out the regional sales dashboard for ops managers \u2014 what goes top-left vs bottom and how many visuals",
+    "should_trigger": false,
+    "why": "Multi-visual layout for an audience is dashboard-composition."
+  }
+]

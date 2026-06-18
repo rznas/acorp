@@ -1,0 +1,102 @@
+[
+  {
+    "query": "every customer in my sales report shows the exact same total revenue number \u2014 i think my relationship between Customer and FactSales is set up wrong, how do i fix the filtering?",
+    "should_trigger": true,
+    "why": "Classic wrong-totals-from-filter-propagation symptom that traces to relationship cardinality/direction."
+  },
+  {
+    "query": "I have a Date table that filters both OrderDate and ShipDate and DeliveryDate in my FactOrders. how should I set up these relationships so I can switch between them?",
+    "should_trigger": true,
+    "why": "Role-playing date dimension with multiple relationships to one fact \u2014 core modeling scope (USERELATIONSHIP)."
+  },
+  {
+    "query": "should I turn cross filter direction to Both on my relationship between DimProduct and the bridge table, or is bidirectional filtering going to cause problems?",
+    "should_trigger": true,
+    "why": "Directly about cross-filter direction decision, central to this skill."
+  },
+  {
+    "query": "in model view i need to connect my orders fact to the customer and product dimension tables \u2014 what cardinality do i pick for each one?",
+    "should_trigger": true,
+    "why": "Creating relationships and choosing cardinality in Model view \u2014 exact skill intent."
+  },
+  {
+    "query": "my SalesAmount measure works but YTD time intelligence keeps erroring, someone said i have to mark my Calendar table as a date table first",
+    "should_trigger": true,
+    "why": "Marking a date table is explicitly in scope and is a prerequisite this skill handles, even though time intel is mentioned."
+  },
+  {
+    "query": "I loaded a Salesperson table and a Region table and three transaction tables into pbix and it's just a flat mess. how do I restructure this into a proper star schema?",
+    "should_trigger": true,
+    "why": "Designing star-schema layout (dimensions vs facts) is the core workflow of this skill."
+  },
+  {
+    "query": "i have students enrolled in multiple courses and courses with multiple students, whats the right way to model this relationship in power bi without double counting?",
+    "should_trigger": true,
+    "why": "Many-to-many relationship modeling \u2014 explicitly in scope."
+  },
+  {
+    "query": "my slicer on DimStore shows no values when i click anything and the visual goes blank, could this be a relationship direction issue between store and sales?",
+    "should_trigger": true,
+    "why": "Slicer-shows-no-data symptom traced to filter propagation/direction \u2014 diagnostic case named in skill."
+  },
+  {
+    "query": "how do i set the Latitude and Longitude columns to be recognized as geographic so the map visual plots them right, and mark the city column as City?",
+    "should_trigger": true,
+    "why": "Setting data categories (geo) on columns is an explicit, uncommon-but-valid part of this skill."
+  },
+  {
+    "query": "before i build my RLS roles and DAX measures, can you sanity-check that my dimension and fact relationships are clean and single-direction where they should be?",
+    "should_trigger": true,
+    "why": "Preparing/validating the model relationships ahead of RLS/DAX \u2014 this skill is the prerequisite owner."
+  },
+  {
+    "query": "write me a DAX measure for year-over-year sales growth percentage using CALCULATE and SAMEPERIODLASTYEAR",
+    "should_trigger": false,
+    "why": "Authoring a specific time-intel DAX measure \u2014 needs applying-time-intelligence / authoring-dax-measures, not model relationships."
+  },
+  {
+    "query": "my pbix file is 1.8GB and reports take 40 seconds to load \u2014 how do i shrink the model and speed it up with aggregations and performance analyzer?",
+    "should_trigger": false,
+    "why": "Large/slow model performance tuning \u2014 needs optimizing-model-performance."
+  },
+  {
+    "query": "in power query i need to unpivot these monthly columns and split the combined product code so my fact table is shaped for a star schema",
+    "should_trigger": false,
+    "why": "Star-schema SHAPING/cleaning in Power Query M \u2014 needs transforming-data-power-query, not relationship modeling."
+  },
+  {
+    "query": "set up dynamic row level security so each regional manager only sees their own region's rows using USERPRINCIPALNAME",
+    "should_trigger": false,
+    "why": "RLS role definition \u2014 needs securing-row-level-access (model relationships are just a prerequisite)."
+  },
+  {
+    "query": "I have a fact table with order quantity and an inventory snapshot with on-hand balance \u2014 which visuals should I use given one is additive and the other semi-additive?",
+    "should_trigger": false,
+    "why": "Additivity-driven visual choice \u2014 needs understanding-fact-additivity / visualizing-dimensional-models, not modeling."
+  },
+  {
+    "query": "should I use Import, DirectQuery, or composite mode connecting to our Azure SQL sales database, and how do relationships behave across DirectQuery sources?",
+    "should_trigger": false,
+    "why": "Storage mode / connector decision \u2014 needs connecting-data-sources despite the relationship mention."
+  },
+  {
+    "query": "what's the best chart to show sales by product category and region for our retail exec dashboard?",
+    "should_trigger": false,
+    "why": "Question-to-chart mapping \u2014 needs mapping-questions-to-charts / retail-analytics-visualization."
+  },
+  {
+    "query": "i want a slicer panel with bookmarks and a reset button so users can toggle filters on the sales report",
+    "should_trigger": false,
+    "why": "Interactive report controls (slicers/bookmarks/buttons) \u2014 needs building-interactive-reports."
+  },
+  {
+    "query": "set up a drillthrough page so clicking a customer in the summary jumps to that customer's detailed transactions",
+    "should_trigger": false,
+    "why": "Drillthrough navigation pattern \u2014 needs drill-pattern-design."
+  },
+  {
+    "query": "add a Decomposition Tree and Key Influencers visual to figure out what's driving churn in our telecom data",
+    "should_trigger": false,
+    "why": "AI visual selection \u2014 needs ai-powered-analysis-selection."
+  }
+]

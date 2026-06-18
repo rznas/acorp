@@ -1,0 +1,107 @@
+[
+  {
+    "query": "I need to build an executive dashboard for our CFO in Power BI. What should go on the single landing page and how do I arrange the KPI cards, revenue trend, and regional map so it reads top-down?",
+    "should_trigger": true,
+    "why": "Audience-specific (exec) single-page layout and visual arrangement \u2014 core dashboard-composition."
+  },
+  {
+    "query": "how do i decide what visuals go on one screen for the warehouse ops team vs the analysts who drill into everything? feels like i'm cramming too much in",
+    "should_trigger": true,
+    "why": "Operational vs analytical audience archetype + information density decision = dashboard composition."
+  },
+  {
+    "query": "My sales report page has 27 charts and it's a mess. Where should I put the slicers, and is there a layout grid or Z-pattern rule I should follow to clean it up?",
+    "should_trigger": true,
+    "why": "Layout grid/Z-pattern, slicer placement, reducing visual count \u2014 squarely dashboard-composition."
+  },
+  {
+    "query": "We're standardizing report pages across the company. Can you recommend a color theme and palette that's accessible (colorblind-safe) and matches our brand blue #1F4E79?",
+    "should_trigger": true,
+    "why": "Color-palette/theme guidance for accessibility and corporate branding is explicitly in scope."
+  },
+  {
+    "query": "putting together a quarterly board deck page in pbix \u2014 want like 5 big numbers at top then trend and a table below. how do i make it feel cohesive not random",
+    "should_trigger": true,
+    "why": "Executive archetype, visual hierarchy, cohesion on one page = dashboard composition."
+  },
+  {
+    "query": "My report page is sluggish even though the model is fine. I think I just have way too many visuals on the canvas \u2014 how many is reasonable per page and what should I cut?",
+    "should_trigger": true,
+    "why": "Report-page performance via visual count is an explicit composition heuristic (the model itself is fine, so not model perf)."
+  },
+  {
+    "query": "designing an operational monitoring screen for the call center floor TV. needs to be glanceable, what archetype and layout works for a wall display",
+    "should_trigger": true,
+    "why": "Operational dashboard archetype + layout for a glanceable single screen \u2014 uncommon but valid composition case."
+  },
+  {
+    "query": "Should the period slicer sit at the top spanning the page or in a left rail, and how do I make sure cross-filtering between the funnel and the bar chart behaves the way I want on this page?",
+    "should_trigger": true,
+    "why": "Slicer placement + cross-filtering interactions across visuals on a page is in scope (composition owns layout/edit-interactions)."
+  },
+  {
+    "query": "I have the right charts already picked for our marketing funnel \u2014 now I just need to lay them out as one polished landing page for the VP. Where do I start?",
+    "should_trigger": true,
+    "why": "Visuals already chosen, now layout/composition for an exec audience \u2014 the exact last-step the skill owns."
+  },
+  {
+    "query": "how do i set up bookmarks to toggle between a summary view and a detail view on the same dashboard page so execs see the clean version first?",
+    "should_trigger": true,
+    "why": "Bookmarks as a page-level interactivity/composition pattern for audience-tuned views; competes with building-interactive-reports but composition wins given the dashboard-layout framing."
+  },
+  {
+    "query": "What chart type should I use to show monthly inventory on-hand balances \u2014 it's a semi-additive measure so I'm worried a SUM line chart is wrong?",
+    "should_trigger": false,
+    "why": "Single-visual choice driven by additivity \u2014 needs understanding-fact-additivity / mapping-questions-to-charts."
+  },
+  {
+    "query": "I want to add a Decomposition Tree and Key Influencers to explain why churn went up. How do I configure those AI visuals?",
+    "should_trigger": false,
+    "why": "AI visual configuration \u2014 needs ai-powered-analysis-selection."
+  },
+  {
+    "query": "Set up drillthrough from my product summary table to a detail page filtered to the selected SKU, including the back button.",
+    "should_trigger": false,
+    "why": "Drillthrough mechanics across pages \u2014 needs drill-pattern-design."
+  },
+  {
+    "query": "my dashboard is super slow to load and the pbix is 1.8GB, refresh times out. how do i shrink the model and use aggregations?",
+    "should_trigger": false,
+    "why": "Large-model/refresh/aggregations performance \u2014 needs optimizing-model-performance, not page-visual-count."
+  },
+  {
+    "query": "I built a great exec dashboard, now how do I publish it to a workspace, package it as an app, and set up a weekly email subscription for leadership?",
+    "should_trigger": false,
+    "why": "Publishing/apps/subscriptions \u2014 needs publishing-and-sharing-content."
+  },
+  {
+    "query": "Each regional manager should only see their own region's rows on the dashboard. How do I set up dynamic RLS so the same report filters per user?",
+    "should_trigger": false,
+    "why": "Row-level security setup \u2014 needs securing-row-level-access despite 'dashboard' keyword."
+  },
+  {
+    "query": "For a retail POS analysis, what's the best visual to compare promo lift across product categories and show basket size by store?",
+    "should_trigger": false,
+    "why": "Domain-specific visual selection (which chart per retail question) \u2014 needs retail-analytics-visualization."
+  },
+  {
+    "query": "I need a pixel-perfect printable monthly statement with a fixed header and page numbers that customers can get as PDF. Build it in Report Builder.",
+    "should_trigger": false,
+    "why": "Paginated RDL printable report \u2014 needs building-paginated-reports, not interactive dashboard layout."
+  },
+  {
+    "query": "add slicers and a mobile phone layout to my existing report, plus tooltips on hover for each bar \u2014 focus is the interactive controls not the overall page design",
+    "should_trigger": false,
+    "why": "Slicer/tooltip/mobile-layout mechanics on an existing report \u2014 better fit is building-interactive-reports."
+  },
+  {
+    "query": "How do I write a DAX measure for YoY revenue growth % so my cards on the dashboard show the right number?",
+    "should_trigger": false,
+    "why": "DAX measure authoring / time intelligence \u2014 needs authoring-dax-measures or applying-time-intelligence, not layout."
+  },
+  {
+    "query": "we're moving our dashboard from dev to test to prod \u2014 how do deployment pipelines work and can I parameterize the data source per stage?",
+    "should_trigger": false,
+    "why": "Dev/test/prod ALM \u2014 needs managing-deployment-lifecycle."
+  }
+]

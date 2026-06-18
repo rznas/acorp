@@ -1,0 +1,102 @@
+[
+  {
+    "query": "we're rolling out Fabric to the whole org and I need to lock down which tenant settings let users publish to web and export to Excel. who should own those decisions?",
+    "should_trigger": true,
+    "why": "Tenant settings governance and decision ownership \u2014 core admin/governance scope."
+  },
+  {
+    "query": "how do I pull the activity log into a storage account so we keep more than 28 days of usage history for auditing?",
+    "should_trigger": true,
+    "why": "Activity-log extraction/monitoring for auditing \u2014 directly named in the skill's When to Use."
+  },
+  {
+    "query": "our finance team keeps complaining reports are stale; I think it's the on-prem data gateway. how many gateways should we run and who gets gateway admin?",
+    "should_trigger": true,
+    "why": "Planning standard/personal/VNet gateways and gateway roles \u2014 explicit admin scope, not refresh authoring."
+  },
+  {
+    "query": "leadership wants to stand up a Center of Excellence for Power BI and measure our adoption maturity. where do we start?",
+    "should_trigger": true,
+    "why": "COE establishment and adoption-maturity assessment \u2014 explicitly in scope."
+  },
+  {
+    "query": "how many fabric admins should we appoint and is it safe to give the whole IT team the admin role?",
+    "should_trigger": true,
+    "why": "Appointing/auditing Fabric administrators and PIM \u2014 foundational admin principle."
+  },
+  {
+    "query": "i need to classify all our HR and payroll reports as Highly Confidential and stop people from sharing them outside the company at the tenant level",
+    "should_trigger": true,
+    "why": "Org-level sensitivity labels and DLP/information protection \u2014 admin scope, not RLS authoring."
+  },
+  {
+    "query": "what's a good lightweight way to govern workspaces and domains across 40 business units without a giant approval committee?",
+    "should_trigger": true,
+    "why": "Iterative governance model across workspaces/domains \u2014 governance layers scope."
+  },
+  {
+    "query": "i want to see who exported data and which reports nobody opens in the last month so we can clean up the tenant",
+    "should_trigger": true,
+    "why": "Tenant inventory + usage metrics monitoring for governance cleanup \u2014 auditing scope (uncommon phrasing, doesn't name the feature)."
+  },
+  {
+    "query": "capacity on our F64 keeps throttling during month-end. how do we monitor capacity utilization and decide whether to autoscale or split workspaces across capacities?",
+    "should_trigger": true,
+    "why": "Capacity management and monitoring at tenant level \u2014 admin scope wins over performance-tuning a single model."
+  },
+  {
+    "query": "should we let users install their own custom visuals or should the admin approve an org visuals list, and how do we audit what's already deployed?",
+    "should_trigger": true,
+    "why": "Organizational visuals governance + tenant audit \u2014 admin/governance scope, not visual selection."
+  },
+  {
+    "query": "my dashboard refresh fails every morning, the gateway shows a credentials error on the SQL connection. how do I fix the data source login?",
+    "should_trigger": false,
+    "why": "Gateway keyword but it's a refresh/connection setup problem \u2014 needs connecting-data-sources."
+  },
+  {
+    "query": "i need to restrict the sales team so each rep only sees their own region's rows in the same report. how do i set that up?",
+    "should_trigger": false,
+    "why": "Sounds like access control but it's row-level filtering \u2014 needs securing-row-level-access."
+  },
+  {
+    "query": "we want to promote this report from dev to test to prod automatically with deployment pipelines. how do we govern that flow?",
+    "should_trigger": false,
+    "why": "'Govern the flow' overlaps but the need is ALM/deployment pipelines \u2014 needs managing-deployment-lifecycle."
+  },
+  {
+    "query": "how do I share this finance app with the whole department and set who can edit vs view in the workspace?",
+    "should_trigger": false,
+    "why": "Workspace roles/app sharing at content level \u2014 needs publishing-and-sharing-content, not tenant admin."
+  },
+  {
+    "query": "the model is 4GB and reports are painfully slow; how do I shrink it and find the bottleneck with Performance Analyzer?",
+    "should_trigger": false,
+    "why": "Capacity/throttle keywords nearby but the real need is model size/perf \u2014 needs optimizing-model-performance."
+  },
+  {
+    "query": "i want to apply a sensitivity label and also hide certain columns from the marketing role inside the dataset",
+    "should_trigger": false,
+    "why": "Sensitivity-label keyword overlaps, but object-level security on a model is securing-row-level-access."
+  },
+  {
+    "query": "set up automated monitoring by calling the Power BI REST admin API from a PowerShell script that runs nightly and writes to a SQL table",
+    "should_trigger": false,
+    "why": "Activity/admin keywords, but the ask is REST/PowerShell automation tooling \u2014 needs embedding-and-automating."
+  },
+  {
+    "query": "how do I embed our governed exec dashboard into our internal portal app so employees see it without logging into the service?",
+    "should_trigger": false,
+    "why": "'Governed' is incidental; the task is embedding in an app \u2014 needs embedding-and-automating."
+  },
+  {
+    "query": "we need pixel-perfect printable monthly compliance statements with the company logo on every page for the audit committee",
+    "should_trigger": false,
+    "why": "'Audit/compliance' keywords but the artifact is a paginated RDL report \u2014 needs building-paginated-reports."
+  },
+  {
+    "query": "i'm an admin and want to build a usage report \u2014 what chart should i use to show monthly active users trending over the last year?",
+    "should_trigger": false,
+    "why": "Admin context but the actual question is chart selection for a trend \u2014 needs mapping-questions-to-charts."
+  }
+]
